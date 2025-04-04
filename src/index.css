@@ -1,0 +1,30 @@
+/* Tailwind base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Custom global styles */
+body {
+  @apply bg-gray-100 text-gray-800 font-sans;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scrollbar styling (optional but useful for dashboard UIs) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 100, 100, 0.5);
+}
+
+/* Prevent text selection on buttons etc. */
+button {
+  @apply select-none;
+}
