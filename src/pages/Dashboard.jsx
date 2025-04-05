@@ -33,6 +33,20 @@ export default function Dashboard({ accessToken, user, onSignOut }) {
     gapi.load("client", initGmail);
   }, [accessToken]);
 
+  // Helper to extract body content
+  const getBody = (message) => {
+    const encodedBody = message.payload.parts
+      ? message.payload.parts.find(part => part.mimeType === "text/plain" || part.mimeType === "text/html")?.body?.data
+      : message.payload.body.data;
+
+    if (encodedBody) {
+      const decodedBody = atob(encodedBody.replace(/-/g, '+').replace(/_/g, '/'));
+      return decodedBody;
+    }
+    return "(No content)";
+  };
+
+
   // ✅ Fetch Emails from Gmail
   const fetchEmails = async () => {
     try {
@@ -116,27 +130,62 @@ export default function Dashboard({ accessToken, user, onSignOut }) {
     );
   };
 
-  const handleSendEmail = (newEmail) => {
-    const newId = Math.max(0, ...emails.map(e => e.id), ...sentEmails.map(e => e.id)) + 1;
+  // const handleSendEmail = (newEmail) => {
+  //   const newId = Math.max(0, ...emails.map(e => e.id), ...sentEmails.map(e => e.id)) + 1;
 
-    const sent = {
-      ...newEmail,
-      id: newId,
-      read: true,
-      starred: false,
-      deleted: false,
-      date: new Date().toISOString(),
-    };
-    setSentEmails([sent, ...sentEmails]);
+  //   const sent = {
+  //     ...newEmail,
+  //     id: newId,
+  //     read: true,
+  //     starred: false,
+  //     deleted: false,
+  //     date: new Date().toISOString(),
+  //   };
+  //   setSentEmails([sent, ...sentEmails]);
 
-    if (!newEmail.replyTo) {
-      const incoming = { ...sent, sender: "me@smartmail.com", read: false };
-      setEmails([incoming, ...emails]);
+  //   if (!newEmail.replyTo) {
+  //     const incoming = { ...sent, sender: "me@smartmail.com", read: false };
+  //     setEmails([incoming, ...emails]);
+  //   }
+
+  //   setActiveSection("Inbox");
+  //   setReplyEmail(null);
+  // };
+
+  const handleSendEmail = async (newEmail) => {
+    try {
+      const emailContent =
+      `From: me\n`+
+      `To: ${newEmail.to}\n`+
+        `Subject: ${newEmail.subject}\n\n`+
+       `${newEmail.body}`;
+  
+      const base64EncodedEmail = btoa(emailContent)
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=+$/, '');
+  
+      await gapi.client.gmail.users.messages.send({
+        userId: 'me',
+        resource: {
+          raw: base64EncodedEmail,
+        },
+      });
+  
+      console.log("Email sent successfully!");
+  
+      const newId = Math.max(0, ...emails.map(e => parseInt(e.id, 10)), ...sentEmails.map(e => parseInt(e.id, 10))) + 1;
+  
+      const sent = { ...newEmail, id: newId, read: true, starred: false, deleted: false };
+      setSentEmails([sent, ...sentEmails]);
+  
+      setActiveSection("Inbox");
+      setReplyEmail(null);
+    } catch (error) {
+      console.error("Failed to send email", error);
     }
-
-    setActiveSection("Inbox");
-    setReplyEmail(null);
   };
+
 
   const handleSelectEmail = (email) => {
     if (!email.read) {
