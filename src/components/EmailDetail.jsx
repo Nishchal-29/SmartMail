@@ -16,7 +16,7 @@ export default function EmailDetail({ email, onBack, onReply }) {
         <button onClick={onBack} className="text-blue-600 mb-4">&larr; Back</button>
         <h2 className="text-2xl font-bold mb-2">{email.subject}</h2>
         <p className="text-sm text-gray-500 mb-4">From: {email.sender}</p>
-        <p className="text-gray-800 mb-6">{email.body}</p>
+        <div className="text-gray-800 mb-6" dangerouslySetInnerHTML={{ __html: email.body }} />
 
         {simplified && (
           <div className="bg-yellow-100 p-4 rounded mb-6">

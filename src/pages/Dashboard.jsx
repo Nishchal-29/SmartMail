@@ -11,6 +11,7 @@ export default function Dashboard({ accessToken }) {
   const [selectedEmail, setSelectedEmail] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [replyEmail, setReplyEmail] = useState(null);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [emails, setEmails] = useState([]);
 
   // ✅ Initialize Gmail API
@@ -32,6 +33,21 @@ export default function Dashboard({ accessToken }) {
     gapi.load("client", initGmail);
   }, [accessToken]);
 
+  // ✅ Helper to extract body content
+  const getBody = (message) => {
+    const encodedBody = message.payload.parts
+      ? message.payload.parts.find(part => part.mimeType === "text/plain" || part.mimeType === "text/html")?.body?.data
+      : message.payload.body.data;
+
+    if (encodedBody) {
+      const decodedBody = atob(encodedBody.replace(/-/g, '+').replace(/_/g, '/'));
+      return decodedBody;
+    }
+    return "(No content)";
+  };
+
+
+  // ✅ Fetch emails from Gmail
   // ✅ Fetch emails from Gmail
   const fetchEmails = async () => {
     try {
@@ -48,17 +64,35 @@ export default function Dashboard({ accessToken }) {
             userId: "me",
             id: msg.id,
           });
-
+      
           const headers = detail.result.payload.headers;
           const from = headers.find((h) => h.name === "From")?.value || "Unknown";
           const subject = headers.find((h) => h.name === "Subject")?.value || "(No Subject)";
-          const body = detail.result.snippet;
-
+          let body = "";
+      
+          const parts = detail.result.payload.parts;
+          if (parts) {
+            const htmlPart = parts.find(part => part.mimeType === "text/html");
+            if (htmlPart) {
+              body = atob(htmlPart.body.data.replace(/-/g, '+').replace(/_/g, '/'));
+            } else {
+              const textPart = parts.find(part => part.mimeType === "text/plain");
+              if (textPart) {
+                body = atob(textPart.body.data.replace(/-/g, '+').replace(/_/g, '/'));
+              }
+            }
+          } else if (detail.result.payload.body?.data) {
+            body = atob(detail.result.payload.body.data.replace(/-/g, '+').replace(/_/g, '/'));
+          }
+      
+          const isUnread = detail.result.labelIds.includes("UNREAD");
+      
           return {
             id: msg.id,
             sender: from,
             subject,
             body,
+            unread: isUnread,
             starred: false,
             deleted: false,
           };
@@ -70,8 +104,17 @@ export default function Dashboard({ accessToken }) {
       console.error("Error fetching emails", err);
     }
   };
+  const handleToggleRead = (id) => {
+    setEmails((prev) =>
+      prev.map((email) =>
+        email.id === id ? { ...email, read: !email.read } : email
+      )
+    );
+  };
+  
+  const [sentEmails, setSentEmails] = useState([]);
 
-  // ⭐ Toggle star
+  // ACTION HANDLERS
   const handleStar = (id) => {
     setEmails((prev) =>
       prev.map((email) =>
@@ -80,7 +123,6 @@ export default function Dashboard({ accessToken }) {
     );
   };
 
-  // 🗑️ Toggle delete
   const handleDelete = (id) => {
     setEmails((prev) =>
       prev.map((email) =>
@@ -89,79 +131,130 @@ export default function Dashboard({ accessToken }) {
     );
   };
 
-  // 🔍 Filter emails based on section and search
-  const filteredEmails = emails.filter((email) => {
-    const matchesSearch =
-      email.sender.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      email.subject.toLowerCase().includes(searchQuery.toLowerCase());
-
-    if (activeSection === "Inbox") {
-      return !email.deleted && matchesSearch;
-    }
-    if (activeSection === "Starred") {
-      return email.starred && !email.deleted && matchesSearch;
-    }
-    if (activeSection === "Trash") {
-      return email.deleted && matchesSearch;
-    }
-    return false;
-  });
-
-  // ✉️ Send email or reply (simulated for now)
   const handleSendEmail = (newEmail) => {
-    const newId = Math.max(...emails.map((e) => parseInt(e.id) || 0), 0) + 1;
-    setEmails([
-      { ...newEmail, id: newId, starred: false, deleted: false },
-      ...emails,
-    ]);
+    const newId = Math.max(0, ...emails.map(e => e.id), ...sentEmails.map(e => e.id)) + 1;
+
+    const sent = { ...newEmail, id: newId, read: true, starred: false, deleted: false };
+    setSentEmails([sent, ...sentEmails]);
+
+    if (!newEmail.replyTo) {
+      // Sent manually (not reply) – keep in inbox as incoming for demo
+      const incoming = { ...sent, sender: "me@smartmail.com", read: false };
+      setEmails([incoming, ...emails]);
+    }
+
     setActiveSection("Inbox");
     setReplyEmail(null);
   };
 
+  const handleSelectEmail = (email) => {
+    if (!email.read) {
+      setEmails((prev) =>
+        prev.map((e) => (e.id === email.id ? { ...e, read: true } : e))
+      );
+    }
+    setSelectedEmail(email);
+  };
+
+  // FILTER
+  const filteredEmails = (() => {
+    const filter = (list) =>
+      list.filter((email) => {
+        const matchesSearch =
+          email.sender.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          email.subject.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesSearch;
+      });
+
+    switch (activeSection) {
+      case "Inbox":
+        return filter(emails.filter((e) => !e.deleted));
+      case "Starred":
+        return filter(emails.filter((e) => e.starred && !e.deleted));
+      case "Trash":
+        return filter(emails.filter((e) => e.deleted));
+      case "Sent":
+        return filter(sentEmails);
+      default:
+        return [];
+    }
+  })();
+
+  const unreadCount = emails.filter((e) => !e.read && !e.deleted).length;
+
   return (
     <div className="flex h-screen">
-      <Sidebar
-        active={activeSection}
-        onSelect={(section) => {
-          setActiveSection(section);
-          setSelectedEmail(null);
-          setReplyEmail(null);
-        }}
-      />
+      {/* Sidebar: mobile toggle */}
+      <div className="hidden md:block">
+        <Sidebar
+          active={activeSection}
+          onSelect={(section) => {
+            setActiveSection(section);
+            setSelectedEmail(null);
+            setReplyEmail(null);
+            setSidebarOpen(false);
+          }}
+          unreadCount={unreadCount}
+        />
+      </div>
 
+      {/* Mobile sidebar */}
+      {sidebarOpen && (
+        <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setSidebarOpen(false)}>
+          <div className="absolute left-0 top-0 bg-[#3869f2] text-white w-64 h-full">
+            <Sidebar
+              active={activeSection}
+              onSelect={(section) => {
+                setActiveSection(section);
+                setSelectedEmail(null);
+                setReplyEmail(null);
+                setSidebarOpen(false);
+              }}
+              unreadCount={unreadCount}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Main content */}
       <div className="flex-1 flex flex-col overflow-hidden">
-        <Navbar onSearch={setSearchQuery} />
+        <Navbar onSearch={setSearchQuery} onMenuClick={() => setSidebarOpen(true)} />
 
         <div className="flex-1 overflow-auto p-6">
-          {activeSection === "Compose" ? (
-            <ComposeView onSend={handleSendEmail} replyTo={replyEmail} />
-          ) : selectedEmail ? (
-            <EmailDetail
-              email={selectedEmail}
-              onBack={() => setSelectedEmail(null)}
-              onReply={(email) => {
-                setReplyEmail(email);
-                setActiveSection("Compose");
-              }}
-            />
-          ) : (
-            <Inbox
-              emails={filteredEmails}
-              onSelect={setSelectedEmail}
-              onStar={handleStar}
-              onDelete={handleDelete}
-            />
-          )}
+          <div className="animate-fadeIn">
+            {activeSection === "Compose" ? (
+              <ComposeView onSend={handleSendEmail} replyTo={replyEmail} />
+            ) : selectedEmail ? (
+              <EmailDetail
+                email={selectedEmail}
+                onBack={() => setSelectedEmail(null)}
+                onReply={(email) => {
+                  setReplyEmail(email);
+                  setActiveSection("Compose");
+                }}
+              />
+            ) : (
+              <Inbox
+                emails={filteredEmails}
+                onSelect={handleSelectEmail}
+                onStar={handleStar}
+                onDelete={handleDelete}
+                onToggleRead={handleToggleRead}
+              />
+            )}
+          </div>
         </div>
       </div>
 
+
+      {/* Compose button */}
       {activeSection !== "Compose" && (
         <button
           onClick={() => {
             setReplyEmail(null);
             setActiveSection("Compose");
           }}
-          className="fixed bottom-6 right-6 bg-[#3869f2] hover:bg-blue-800 text-white px-6 py-3 rounded-full shadow-lg z-50"
+          className="fixed bottom-6 right-6 bg-[#3869f2] hover:bg-blue-800 text-white px-6 py-3 rounded-full shadow-lg z-50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
         >
           Compose
         </button>
