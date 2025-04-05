@@ -1,44 +1,77 @@
-import { useState } from 'react';
-import Sidebar from '../components/Sidebar';
-import Inbox from '../components/Inbox';
-import Navbar from '../components/Navbar';
-import EmailDetail from '../components/EmailDetail';
-import ComposeView from '../components/ComposeView';
+import { useState, useEffect } from "react";
+import { gapi } from "gapi-script";
+import Sidebar from "../components/Sidebar";
+import Inbox from "../components/Inbox";
+import Navbar from "../components/Navbar";
+import EmailDetail from "../components/EmailDetail";
+import ComposeView from "../components/ComposeView";
 
-export default function Dashboard() {
+export default function Dashboard({ accessToken }) {
   const [activeSection, setActiveSection] = useState("Inbox");
   const [selectedEmail, setSelectedEmail] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [replyEmail, setReplyEmail] = useState(null);
+  const [emails, setEmails] = useState([]);
 
-  const [emails, setEmails] = useState([
-    {
-      id: 1,
-      sender: "john@example.com",
-      subject: "Meeting Agenda",
-      body: "Let's meet tomorrow at 10am.",
-      starred: false,
-      deleted: false,
-    },
-    {
-      id: 2,
-      sender: "sales@company.com",
-      subject: "New Offers!",
-      body: "Don't miss our limited-time deals.",
-      starred: true,
-      deleted: false,
-    },
-    {
-      id: 3,
-      sender: "support@service.com",
-      subject: "Your Ticket Update",
-      body: "Your issue has been resolved.",
-      starred: false,
-      deleted: false,
-    },
-  ]);
+  // ✅ Initialize Gmail API
+  useEffect(() => {
+    const initGmail = async () => {
+      try {
+        await gapi.client.init({
+          discoveryDocs: ["https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest"],
+        });
 
-  // Toggle star
+        gapi.auth.setToken({ access_token: accessToken });
+
+        fetchEmails();
+      } catch (err) {
+        console.error("Failed to initialize Gmail API", err);
+      }
+    };
+
+    gapi.load("client", initGmail);
+  }, [accessToken]);
+
+  // ✅ Fetch emails from Gmail
+  const fetchEmails = async () => {
+    try {
+      const res = await gapi.client.gmail.users.messages.list({
+        userId: "me",
+        maxResults: 15,
+      });
+
+      const messages = res.result.messages || [];
+
+      const emailData = await Promise.all(
+        messages.map(async (msg) => {
+          const detail = await gapi.client.gmail.users.messages.get({
+            userId: "me",
+            id: msg.id,
+          });
+
+          const headers = detail.result.payload.headers;
+          const from = headers.find((h) => h.name === "From")?.value || "Unknown";
+          const subject = headers.find((h) => h.name === "Subject")?.value || "(No Subject)";
+          const body = detail.result.snippet;
+
+          return {
+            id: msg.id,
+            sender: from,
+            subject,
+            body,
+            starred: false,
+            deleted: false,
+          };
+        })
+      );
+
+      setEmails(emailData);
+    } catch (err) {
+      console.error("Error fetching emails", err);
+    }
+  };
+
+  // ⭐ Toggle star
   const handleStar = (id) => {
     setEmails((prev) =>
       prev.map((email) =>
@@ -47,7 +80,7 @@ export default function Dashboard() {
     );
   };
 
-  // Toggle delete/restore
+  // 🗑️ Toggle delete
   const handleDelete = (id) => {
     setEmails((prev) =>
       prev.map((email) =>
@@ -56,7 +89,7 @@ export default function Dashboard() {
     );
   };
 
-  // Filter emails based on section and search
+  // 🔍 Filter emails based on section and search
   const filteredEmails = emails.filter((email) => {
     const matchesSearch =
       email.sender.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -74,9 +107,9 @@ export default function Dashboard() {
     return false;
   });
 
-  // Send new email or reply
+  // ✉️ Send email or reply (simulated for now)
   const handleSendEmail = (newEmail) => {
-    const newId = Math.max(...emails.map(e => e.id)) + 1;
+    const newId = Math.max(...emails.map((e) => parseInt(e.id) || 0), 0) + 1;
     setEmails([
       { ...newEmail, id: newId, starred: false, deleted: false },
       ...emails,
@@ -87,7 +120,6 @@ export default function Dashboard() {
 
   return (
     <div className="flex h-screen">
-      {/* Sidebar */}
       <Sidebar
         active={activeSection}
         onSelect={(section) => {
@@ -97,7 +129,6 @@ export default function Dashboard() {
         }}
       />
 
-      {/* Main content */}
       <div className="flex-1 flex flex-col overflow-hidden">
         <Navbar onSearch={setSearchQuery} />
 
@@ -124,7 +155,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Compose Button */}
       {activeSection !== "Compose" && (
         <button
           onClick={() => {
