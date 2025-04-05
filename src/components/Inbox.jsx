@@ -45,15 +45,15 @@ export default function Inbox({ emails, onSelect, onStar, onDelete, onToggleRead
         </div>
 
         {/* Action Buttons */}
-        <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex gap-3 opacity-0 group-hover:opacity-100">
+        <div className="absolute right-5 top-1/2 transform -translate-y-1/2 flex gap-4 opacity-0 group-hover:opacity-100">
           <button
             onClick={() => onToggleRead(email.id)}
             title={email.read ? "Mark as Unread" : "Mark as Read"}
-            className="text-sm text-gray-500 hover:text-blue-600"
+            className="text-sm text-gray-500 hover:text-black"
           >
-            {email.read ? "📖" : "📩"}
+            {email.read ? <i class="fa-regular fa-envelope-open fa-xl"></i> : <i class="fa-regular fa-envelope fa-xl"></i>}
           </button>
-          <button
+          {/* <button
             onClick={() => onStar(email.id)}
             title={email.starred ? "Unstar" : "Star"}
             className={`hover:text-yellow-500 ${
@@ -61,16 +61,24 @@ export default function Inbox({ emails, onSelect, onStar, onDelete, onToggleRead
             }`}
           >
             ⭐
-          </button>
+          </button> */}
+          <button
+  onClick={() => onStar(email.id)}
+  title={email.starred ? "Unstar" : "Star"}
+  className="hover:text-black text-gray-500"
+>
+  {email.starred ? (
+    <i className="fa-solid fa-star" style={{ color: "#FFD43B" }}></i>
+  ) : (
+    <i className="fa-regular fa-star"></i>
+  )}
+</button>
+
           <button
             onClick={() => onDelete(email.id)}
             title={email.deleted ? "Restore" : "Delete"}
-            className={`hover:text-red-500 ${
-              email.deleted ? "text-red-500" : "text-gray-400"
-            }`}
-          >
-            🗑️
-          </button>
+            className="hover:text-black text-gray-500">
+              {email.deleted ? (<i class="fa-solid fa-trash"></i>) : (<i class="fa-regular fa-trash-can"></i>)}</button>
         </div>
       </li>
     );

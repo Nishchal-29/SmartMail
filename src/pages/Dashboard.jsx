@@ -6,15 +6,16 @@ import Navbar from "../components/Navbar";
 import EmailDetail from "../components/EmailDetail";
 import ComposeView from "../components/ComposeView";
 
-export default function Dashboard({ accessToken }) {
+export default function Dashboard({ accessToken, user, onSignOut }) {
   const [activeSection, setActiveSection] = useState("Inbox");
   const [selectedEmail, setSelectedEmail] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [replyEmail, setReplyEmail] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [emails, setEmails] = useState([]);
+  const [sentEmails, setSentEmails] = useState([]);
 
-  // ✅ Initialize Gmail API
+  // ✅ Load Gmail API
   useEffect(() => {
     const initGmail = async () => {
       try {
@@ -23,7 +24,6 @@ export default function Dashboard({ accessToken }) {
         });
 
         gapi.auth.setToken({ access_token: accessToken });
-
         fetchEmails();
       } catch (err) {
         console.error("Failed to initialize Gmail API", err);
@@ -33,22 +33,7 @@ export default function Dashboard({ accessToken }) {
     gapi.load("client", initGmail);
   }, [accessToken]);
 
-  // ✅ Helper to extract body content
-  const getBody = (message) => {
-    const encodedBody = message.payload.parts
-      ? message.payload.parts.find(part => part.mimeType === "text/plain" || part.mimeType === "text/html")?.body?.data
-      : message.payload.body.data;
-
-    if (encodedBody) {
-      const decodedBody = atob(encodedBody.replace(/-/g, '+').replace(/_/g, '/'));
-      return decodedBody;
-    }
-    return "(No content)";
-  };
-
-
-  // ✅ Fetch emails from Gmail
-  // ✅ Fetch emails from Gmail
+  // ✅ Fetch Emails from Gmail
   const fetchEmails = async () => {
     try {
       const res = await gapi.client.gmail.users.messages.list({
@@ -64,12 +49,12 @@ export default function Dashboard({ accessToken }) {
             userId: "me",
             id: msg.id,
           });
-      
+
           const headers = detail.result.payload.headers;
           const from = headers.find((h) => h.name === "From")?.value || "Unknown";
           const subject = headers.find((h) => h.name === "Subject")?.value || "(No Subject)";
           let body = "";
-      
+
           const parts = detail.result.payload.parts;
           if (parts) {
             const htmlPart = parts.find(part => part.mimeType === "text/html");
@@ -84,17 +69,18 @@ export default function Dashboard({ accessToken }) {
           } else if (detail.result.payload.body?.data) {
             body = atob(detail.result.payload.body.data.replace(/-/g, '+').replace(/_/g, '/'));
           }
-      
+
           const isUnread = detail.result.labelIds.includes("UNREAD");
-      
+
           return {
             id: msg.id,
             sender: from,
             subject,
             body,
-            unread: isUnread,
+            read: !isUnread,
             starred: false,
             deleted: false,
+            date: new Date().toISOString(),
           };
         })
       );
@@ -104,6 +90,8 @@ export default function Dashboard({ accessToken }) {
       console.error("Error fetching emails", err);
     }
   };
+
+  // ✅ Email Handlers
   const handleToggleRead = (id) => {
     setEmails((prev) =>
       prev.map((email) =>
@@ -111,10 +99,7 @@ export default function Dashboard({ accessToken }) {
       )
     );
   };
-  
-  const [sentEmails, setSentEmails] = useState([]);
 
-  // ACTION HANDLERS
   const handleStar = (id) => {
     setEmails((prev) =>
       prev.map((email) =>
@@ -134,11 +119,17 @@ export default function Dashboard({ accessToken }) {
   const handleSendEmail = (newEmail) => {
     const newId = Math.max(0, ...emails.map(e => e.id), ...sentEmails.map(e => e.id)) + 1;
 
-    const sent = { ...newEmail, id: newId, read: true, starred: false, deleted: false };
+    const sent = {
+      ...newEmail,
+      id: newId,
+      read: true,
+      starred: false,
+      deleted: false,
+      date: new Date().toISOString(),
+    };
     setSentEmails([sent, ...sentEmails]);
 
     if (!newEmail.replyTo) {
-      // Sent manually (not reply) – keep in inbox as incoming for demo
       const incoming = { ...sent, sender: "me@smartmail.com", read: false };
       setEmails([incoming, ...emails]);
     }
@@ -156,15 +147,13 @@ export default function Dashboard({ accessToken }) {
     setSelectedEmail(email);
   };
 
-  // FILTER
+  // ✅ Filtered View
   const filteredEmails = (() => {
     const filter = (list) =>
-      list.filter((email) => {
-        const matchesSearch =
-          email.sender.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          email.subject.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesSearch;
-      });
+      list.filter((email) =>
+        email.sender.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        email.subject.toLowerCase().includes(searchQuery.toLowerCase())
+      );
 
     switch (activeSection) {
       case "Inbox":
@@ -184,7 +173,7 @@ export default function Dashboard({ accessToken }) {
 
   return (
     <div className="flex h-screen">
-      {/* Sidebar: mobile toggle */}
+      {/* Sidebar */}
       <div className="hidden md:block">
         <Sidebar
           active={activeSection}
@@ -198,9 +187,12 @@ export default function Dashboard({ accessToken }) {
         />
       </div>
 
-      {/* Mobile sidebar */}
+      {/* Mobile Sidebar */}
       {sidebarOpen && (
-        <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setSidebarOpen(false)}>
+        <div
+          className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={() => setSidebarOpen(false)}
+        >
           <div className="absolute left-0 top-0 bg-[#3869f2] text-white w-64 h-full">
             <Sidebar
               active={activeSection}
@@ -216,9 +208,14 @@ export default function Dashboard({ accessToken }) {
         </div>
       )}
 
-      {/* Main content */}
+      {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">
-        <Navbar onSearch={setSearchQuery} onMenuClick={() => setSidebarOpen(true)} />
+        <Navbar
+          onSearch={setSearchQuery}
+          onMenuClick={() => setSidebarOpen(true)}
+          onSignOut={onSignOut}
+          user={user}
+        />
 
         <div className="flex-1 overflow-auto p-6">
           <div className="animate-fadeIn">
@@ -246,8 +243,7 @@ export default function Dashboard({ accessToken }) {
         </div>
       </div>
 
-
-      {/* Compose button */}
+      {/* Compose Button */}
       {activeSection !== "Compose" && (
         <button
           onClick={() => {
