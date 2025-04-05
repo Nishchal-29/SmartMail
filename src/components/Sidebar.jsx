@@ -8,7 +8,7 @@ export default function Sidebar({ active, onSelect, unreadCount = 0 }) {
   
     return (
       <div className="bg-[#3869f2] text-white w-64 h-full flex flex-col p-4">
-        <h2 className="text-2xl font-bold text-center mb-6 transition-transform hover:scale-105"><i className="fa-solid fa-envelope"></i> SmartMail</h2>
+        <h2 className="text-2xl font-bold text-center mb-6 transition-transform hover:scale-105"><i className="fa-solid fa-envelope"></i> InboXpert</h2>
   
         <ul className="space-y-3 flex-1">
           {navItems.map(({ name, icon }) => {

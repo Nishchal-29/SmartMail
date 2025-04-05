@@ -22,7 +22,7 @@ export default function Navbar({ onSearch, onMenuClick, onSignOut, user }) {
 
       {/* Logo */}
       <h1 className="text-lg font-semibold text-blue-700 transition-transform hover:scale-105">
-        📧 MailBoard
+         
       </h1>
 
       {/* Search */}

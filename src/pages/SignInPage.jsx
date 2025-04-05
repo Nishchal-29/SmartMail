@@ -51,7 +51,7 @@ const SignInPage = ({ onLogin }) => {
       
         <TypeAnimation
           sequence={[
-            'SmartMail',
+            'InboXpert',
             2500,
             ' ',
             () => {
@@ -64,7 +64,7 @@ const SignInPage = ({ onLogin }) => {
           repeat={Infinity}
           style={{ fontSize: '4em',color:"#3869f2", fontWeight: 'bold', display: 'inline-block' }}
         />
-        <p className="px-10 pb-5">SmartMail is a platform that aims to transform email communication by integrating artificial intelligence into the regular mail, creating a seamless and intuitive user experience that enhances productivity and reshapes how users interact with their inbox.</p>
+        <p className="px-10 pb-5">InboXpert is a platform that aims to transform email communication by integrating artificial intelligence into the regular mail, creating a seamless and intuitive user experience that enhances productivity and reshapes how users interact with their inbox.</p>
       
         <h1 className="text-4xl font-semibold mb-4 mt-10 text-left">Sign in</h1>
         <p className="text-left text-l">with your Google Account to continue to SmartMail.</p>
