@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
+import { TypeAnimation } from 'react-type-animation';
 
 const CLIENT_ID = "409549734064-rd3k1tm08e9maj8ksnjrectjlb0pnr5n.apps.googleusercontent.com";
 
@@ -37,19 +38,42 @@ const SignInPage = ({ onLogin }) => {
     setUser(userData);
     onLogin(userData); // Pass user info + token to parent
   };
+  
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="h-screen flex items-center justify-center bg-gradient-to-b from-indigo-400 to-slate-50">
+      
       {!user ? (
-        <div className="bg-white p-8 rounded-lg shadow-md text-center">
-          <h2 className="text-2xl font-semibold mb-4">Sign in to continue</h2>
-          <button
-            onClick={handleSignIn}
-            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
-          >
-            Sign in with Google
-          </button>
-        </div>
+        <div className="bg-white p-8 pt-5 rounded-lg shadow-md text-center w-2/3 h-1/2 relative">
+        <span className="absolute top-14 left-10 text-2xl" >
+          <i className="fa-solid fa-envelope fa-2xl" style={{ color: "#3869f2" }}></i>
+        </span>
+      
+        <TypeAnimation
+          sequence={[
+            'SmartMail',
+            2500,
+            ' ',
+            () => {
+              console.log('Sequence completed');
+            },
+          ]}
+          wrapper="span"
+          cursor={true}
+          speed={1}
+          repeat={Infinity}
+          style={{ fontSize: '4em',color:"#3869f2", fontWeight: 'bold', display: 'inline-block' }}
+        />
+        <p className="px-10 pb-5">SmartMail is a platform that aims to transform email communication by integrating artificial intelligence into the regular mail, creating a seamless and intuitive user experience that enhances productivity and reshapes how users interact with their inbox.</p>
+      
+        <h1 className="text-4xl font-semibold mb-4 mt-10 text-left">Sign in</h1>
+        <p className="text-left text-l">with your Google Account to continue to SmartMail.</p>
+      
+        <button
+          onClick={handleSignIn}
+          className="bg-blue-600 text-white px-16 py-4 rounded hover:bg-blue-700 transition absolute right-16 bottom-24">Sign in with Google</button>
+      </div>
+      
       ) : (
         <div className="bg-white p-8 rounded-lg shadow-md text-center">
           <img
