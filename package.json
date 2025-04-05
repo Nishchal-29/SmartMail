@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@react-oauth/google": "^0.12.1",
     "date-fns": "^4.1.0",
@@ -32,8 +31,5 @@
     "tailwindcss": "^3.4.17",
     "vite": "^6.2.0"
   },
-  "scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-  }
+  "homepage": "https://jinishgupta.github.io/SmartMail"
 }

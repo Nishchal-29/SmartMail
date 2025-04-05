@@ -21,24 +21,49 @@ const SignInPage = ({ onLogin }) => {
     initClient();
   }, []);
 
-  const handleSignIn = async () => {
-    const auth2 = gapi.auth2.getAuthInstance();
-    const googleUser = await auth2.signIn();
+  // const handleSignIn = async () => {
+  //   const auth2 = gapi.auth2.getAuthInstance();
+  //   const googleUser = await auth2.signIn();
 
-    const token = googleUser.getAuthResponse().access_token;
-    const profile = googleUser.getBasicProfile();
+  //   const token = googleUser.getAuthResponse().access_token;
+  //   const profile = googleUser.getBasicProfile();
 
-    const userData = {
-      token,
-      name: profile.getName(),
-      email: profile.getEmail(),
-      imageUrl: profile.getImageUrl(),
-    };
+  //   const userData = {
+  //     token,
+  //     name: profile.getName(),
+  //     email: profile.getEmail(),
+  //     imageUrl: profile.getImageUrl(),
+  //   };
 
-    setUser(userData);
-    onLogin(userData); // Pass user info + token to parent
-  };
+  //   setUser(userData);
+  //   onLogin(userData); // Pass user info + token to parent
+  // };
   
+  const handleSignIn = async () => {
+    try {
+      const auth2 = gapi.auth2.getAuthInstance();
+      const googleUser = await auth2.signIn({
+        prompt: 'consent',
+      });
+
+      const token = googleUser.getAuthResponse().access_token;
+      console.log("Access Token:", token);
+      localStorage.setItem("accessToken", token);
+
+      const profile = googleUser.getBasicProfile();
+      const userData = {
+        token,
+        name: profile.getName(),
+        email: profile.getEmail(),
+        imageUrl: profile.getImageUrl(),
+      };
+      console.log(userData);
+      setUser(userData);
+      onLogin(userData);
+    } catch (error) {
+      console.error("Error during sign-in:", error);
+    }
+  };
 
   return (
     <div className="h-screen flex items-center justify-center bg-gradient-to-b from-indigo-400 to-slate-50">
@@ -55,7 +80,7 @@ const SignInPage = ({ onLogin }) => {
             2500,
             ' ',
             () => {
-              console.log('Sequence completed');
+              // console.log('Sequence completed');
             },
           ]}
           wrapper="span"

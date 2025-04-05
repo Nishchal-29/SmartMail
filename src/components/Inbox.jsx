@@ -51,7 +51,7 @@ export default function Inbox({ emails, onSelect, onStar, onDelete, onToggleRead
             title={email.read ? "Mark as Unread" : "Mark as Read"}
             className="text-sm text-gray-500 hover:text-black"
           >
-            {email.read ? <i class="fa-regular fa-envelope-open fa-xl"></i> : <i class="fa-regular fa-envelope fa-xl"></i>}
+            {email.read ? <i className="fa-regular fa-envelope-open fa-xl"></i> : <i className="fa-regular fa-envelope fa-xl"></i>}
           </button>
           {/* <button
             onClick={() => onStar(email.id)}
@@ -78,7 +78,7 @@ export default function Inbox({ emails, onSelect, onStar, onDelete, onToggleRead
             onClick={() => onDelete(email.id)}
             title={email.deleted ? "Restore" : "Delete"}
             className="hover:text-black text-gray-500">
-              {email.deleted ? (<i class="fa-solid fa-trash"></i>) : (<i class="fa-regular fa-trash-can"></i>)}</button>
+              {email.deleted ? (<i className="fa-solid fa-trash"></i>) : (<i className="fa-regular fa-trash-can"></i>)}</button>
         </div>
       </li>
     );
