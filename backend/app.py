@@ -48,13 +48,13 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+from compose import generate_email_from_prompt
+from craftResponse import generate_crafted_response
 from summary import get_summary
-from compose import generate_email_from_prompt  # For composing new emails
-from craftResponse import generate_crafted_response  # For smart replies
 
 app = FastAPI()
 
-# Allow frontend access
+# Enable CORS for frontend (adjust domain as needed)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
@@ -63,28 +63,39 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ======== Schemas ========
+# ======== Models ========
 class PromptRequest(BaseModel):
     prompt: str
+
+class SmartReplyRequest(BaseModel):
+    prompt: str            # The original email body
+    user_prompt: str = ""  # Optional user guidance
 
 class EmailBody(BaseModel):
     body: str
 
-
 # ======== Endpoints ========
 
-# ✨ Compose from prompt (NEW EMAIL)
+# ✨ Compose new email from prompt
 @app.post("/compose-email")
 def compose_email_handler(data: PromptRequest):
-    return {"response": generate_email_from_prompt(data.prompt)}
+    return {
+        "response": generate_email_from_prompt(data.prompt)
+    }
 
-# 💬 Smart reply to an email
+# 💬 Smart reply to received email
 @app.post("/smart-reply")
-def smart_reply_handler(data: PromptRequest):
-    return {"response": generate_crafted_response(data.prompt)}
+def smart_reply_handler(data: SmartReplyRequest):
+    return {
+        "response": generate_crafted_response(
+            email_scenario=data.prompt,
+            user_prompt=data.user_prompt if data.user_prompt else None
+        )
+    }
 
-# ✂️ Summarize Email
+# 📝 Summarize email content
 @app.post("/simplify")
 def simplify_email(data: EmailBody):
-    summary = get_summary(data.body)
-    return {"summary": summary}
+    return {
+        "summary": get_summary(data.body)
+    }

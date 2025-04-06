@@ -4,7 +4,8 @@ export default function ComposeView({ onSend, replyTo }) {
   const [to, setTo] = useState("");
   const [subject, setSubject] = useState("");
   const [body, setBody] = useState("");
-  const [prompt, setPrompt] = useState("");
+  const [prompt, setPrompt] = useState(""); // for new email
+  const [userPrompt, setUserPrompt] = useState(""); // for smart reply
   const [loadingPrompt, setLoadingPrompt] = useState(false);
   const [smartReplyLoading, setSmartReplyLoading] = useState(false);
 
@@ -19,43 +20,44 @@ export default function ComposeView({ onSend, replyTo }) {
     onSend({ to, subject, body, replyTo });
   };
 
-  // Compose from user-entered prompt
-const handleGenerateFromPrompt = async () => {
-  if (!prompt) return;
-  setLoadingPrompt(true);
-  try {
-    const res = await fetch("http://localhost:8000/compose-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt }),
-    });
-    const data = await res.json();
-    if (data.response) setBody(data.response);
-  } catch (err) {
-    console.error("Prompt-based email generation failed:", err);
-  } finally {
-    setLoadingPrompt(false);
-  }
-};
+  const handleGenerateFromPrompt = async () => {
+    if (!prompt) return;
+    setLoadingPrompt(true);
+    try {
+      const res = await fetch("http://localhost:8000/compose-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt }),
+      });
+      const data = await res.json();
+      if (data.response) setBody(data.response);
+    } catch (err) {
+      console.error("Prompt-based email generation failed:", err);
+    } finally {
+      setLoadingPrompt(false);
+    }
+  };
 
-// Smart reply to existing email
-const handleSmartReply = async () => {
-  if (!replyTo?.body) return;
-  setSmartReplyLoading(true);
-  try {
-    const res = await fetch("http://localhost:8000/smart-reply", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt: replyTo.body }),
-    });
-    const data = await res.json();
-    if (data.response) setBody(data.response);
-  } catch (error) {
-    console.error("Smart reply generation failed:", error);
-  } finally {
-    setSmartReplyLoading(false);
-  }
-};
+  const handleSmartReply = async () => {
+    if (!replyTo?.body) return;
+    setSmartReplyLoading(true);
+    try {
+      const res = await fetch("http://localhost:8000/smart-reply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          prompt: replyTo.body,
+          user_prompt: userPrompt || "",
+        }),
+      });
+      const data = await res.json();
+      if (data.response) setBody(data.response);
+    } catch (error) {
+      console.error("Smart reply generation failed:", error);
+    } finally {
+      setSmartReplyLoading(false);
+    }
+  };
 
   return (
     <div className="max-w-4xl mx-auto animate-fadeIn">
@@ -91,18 +93,29 @@ const handleSmartReply = async () => {
         />
       </div>
 
-      {/* Smart Reply button */}
       {replyTo && (
-        <button
-          onClick={handleSmartReply}
-          className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 mb-4 mr-3 transition"
-          disabled={smartReplyLoading}
-        >
-          {smartReplyLoading ? "Generating..." : "Smart Reply"}
-        </button>
+        <>
+          <div className="mb-4 bg-gray-50 border p-3 rounded shadow-inner">
+            <label className="block text-sm font-semibold mb-1">Optional prompt to guide reply:</label>
+            <textarea
+              rows="3"
+              className="w-full border rounded p-2"
+              placeholder="e.g. make it more empathetic, add apology, etc."
+              value={userPrompt}
+              onChange={(e) => setUserPrompt(e.target.value)}
+            />
+          </div>
+
+          <button
+            onClick={handleSmartReply}
+            className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 mb-6 mr-6 transition"
+            disabled={smartReplyLoading}
+          >
+            {smartReplyLoading ? "Generating Reply..." : "Generate Smart Reply"}
+           </button> 
+        </>
       )}
 
-      {/* AI Prompt-to-Email Generator */}
       {!replyTo && (
         <div className="mb-6 bg-gray-50 p-4 border rounded shadow-inner">
           <label className="block text-sm font-semibold mb-2">✨ Generate with AI (optional):</label>
@@ -123,7 +136,6 @@ const handleSmartReply = async () => {
         </div>
       )}
 
-      {/* Send Button */}
       <button
         onClick={handleSend}
         className="bg-[#3869f2] hover:bg-blue-800 text-white px-6 py-2 rounded transition-all hover:scale-105"
