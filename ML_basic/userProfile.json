@@ -1,0 +1,31 @@
+{
+  "user1": {
+    "tone_profile": {
+      "Formal": 0.175,
+      "Polite": 0.267,
+      "Assertive": 0.01,
+      "Neutral": 0.092,
+      "Friendly": 0.175,
+      "Apologetic": 0.044,
+      "Grateful": 0.136,
+      "Encouraging": 0.087,
+      "Urgent": 0.005,
+      "Enthusiastic": 0.005,
+      "Helpful": 0.005
+    },
+    "category_profile": {
+      "Promotional": 0.045,
+      "Request": 0.22,
+      "Transactional": 0.068,
+      "Informational": 0.242,
+      "Complaint": 0.038,
+      "Apology": 0.091,
+      "Professional": 0.068,
+      "Inquiry": 0.152,
+      "Feedback": 0.061,
+      "Acknowledgment": 0.008,
+      "Response": 0.008
+    },
+    "avg_conciseness": 0.722
+  }
+}
