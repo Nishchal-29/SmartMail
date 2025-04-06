@@ -14,7 +14,7 @@ const SignInPage = ({ onLogin }) => {
       gapi.load("auth2", () => {
         gapi.auth2.init({
           clientId: CLIENT_ID,
-          scope: "https://www.googleapis.com/auth/gmail.readonly profile email",
+          scope: "https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.send",
         });
       });
     };
@@ -43,13 +43,14 @@ const SignInPage = ({ onLogin }) => {
     try {
       const auth2 = gapi.auth2.getAuthInstance();
       const googleUser = await auth2.signIn({
+        scope: "https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.send",
         prompt: 'consent',
       });
-
+  
       const token = googleUser.getAuthResponse().access_token;
       console.log("Access Token:", token);
       localStorage.setItem("accessToken", token);
-
+  
       const profile = googleUser.getBasicProfile();
       const userData = {
         token,
@@ -64,6 +65,7 @@ const SignInPage = ({ onLogin }) => {
       console.error("Error during sign-in:", error);
     }
   };
+  
 
   return (
     <div className="h-screen flex items-center justify-center bg-gradient-to-b from-indigo-400 to-slate-50">

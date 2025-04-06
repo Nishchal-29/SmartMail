@@ -5,6 +5,8 @@ import Inbox from "../components/Inbox";
 import Navbar from "../components/Navbar";
 import EmailDetail from "../components/EmailDetail";
 import ComposeView from "../components/ComposeView";
+import { getDatabase, ref, get } from "firebase/database"; // Realtime Database imports
+import { initializeApp } from "firebase/app";
 
 export default function Dashboard({ accessToken, user, onSignOut }) {
   const [activeSection, setActiveSection] = useState("Inbox");
@@ -15,7 +17,7 @@ export default function Dashboard({ accessToken, user, onSignOut }) {
   const [emails, setEmails] = useState([]);
   const [sentEmails, setSentEmails] = useState([]);
 
-  // ✅ Load Gmail API
+  // Load Gmail API
   useEffect(() => {
     const initGmail = async () => {
       try {
@@ -33,79 +35,108 @@ export default function Dashboard({ accessToken, user, onSignOut }) {
     gapi.load("client", initGmail);
   }, [accessToken]);
 
-  // Helper to extract body content
-  const getBody = (message) => {
-    const encodedBody = message.payload.parts
-      ? message.payload.parts.find(part => part.mimeType === "text/plain" || part.mimeType === "text/html")?.body?.data
-      : message.payload.body.data;
-
-    if (encodedBody) {
-      const decodedBody = atob(encodedBody.replace(/-/g, '+').replace(/_/g, '/'));
-      return decodedBody;
-    }
-    return "(No content)";
+  const firebaseConfig = {
+    apiKey: "AIzaSyDmAQQ0iHTq-RTAc2WeD1qoZxDRroCrkx8",
+    authDomain: "smartmail-bc5f2.firebaseapp.com",
+    databaseURL: "https://smartmail-bc5f2-default-rtdb.firebaseio.com",
+    projectId: "smartmail-bc5f2",
+    storageBucket: "smartmail-bc5f2.firebasestorage.app",
+    messagingSenderId: "684319493774",
+    appId: "1:684319493774:web:ceceae8ed48f1a8fa9c3df",
+    measurementId: "G-Y3YV5J85JL"
   };
 
+  // Initialize Firebase App
+const app = initializeApp(firebaseConfig);
 
-  // ✅ Fetch Emails from Gmail
-  const fetchEmails = async () => {
-    try {
-      const res = await gapi.client.gmail.users.messages.list({
-        userId: "me",
-        maxResults: 15,
-      });
+const fetchEmails = async () => {
+  try {
+    const db = getDatabase(app); // assumes Firebase App is already initialized
+    const dbRef = ref(db, "/"); // root level
+    const snapshot = await get(dbRef);
 
-      const messages = res.result.messages || [];
-
-      const emailData = await Promise.all(
-        messages.map(async (msg) => {
-          const detail = await gapi.client.gmail.users.messages.get({
-            userId: "me",
-            id: msg.id,
-          });
-
-          const headers = detail.result.payload.headers;
-          const from = headers.find((h) => h.name === "From")?.value || "Unknown";
-          const subject = headers.find((h) => h.name === "Subject")?.value || "(No Subject)";
-          let body = "";
-
-          const parts = detail.result.payload.parts;
-          if (parts) {
-            const htmlPart = parts.find(part => part.mimeType === "text/html");
-            if (htmlPart) {
-              body = atob(htmlPart.body.data.replace(/-/g, '+').replace(/_/g, '/'));
-            } else {
-              const textPart = parts.find(part => part.mimeType === "text/plain");
-              if (textPart) {
-                body = atob(textPart.body.data.replace(/-/g, '+').replace(/_/g, '/'));
-              }
-            }
-          } else if (detail.result.payload.body?.data) {
-            body = atob(detail.result.payload.body.data.replace(/-/g, '+').replace(/_/g, '/'));
-          }
-
-          const isUnread = detail.result.labelIds.includes("UNREAD");
-
-          return {
-            id: msg.id,
-            sender: from,
-            subject,
-            body,
-            read: !isUnread,
-            starred: false,
-            deleted: false,
-            date: new Date().toISOString(),
-          };
-        })
-      );
-
+    if (snapshot.exists()) {
+      const data = snapshot.val();
+      const emailData = Object.keys(data).map((key) => ({
+        id: key,
+        sender: data[key].sender || "me",
+        subject: data[key].email.substring(9,100) || "(No Subject)",
+        body: data[key].email || "",
+        read: data[key].read ?? true,        // default true if not present
+        starred: data[key].starred ?? false, // default false
+        deleted: data[key].deleted ?? false, // default false
+        date: data[key].date || new Date().toISOString(),
+      }));
       setEmails(emailData);
-    } catch (err) {
-      console.error("Error fetching emails", err);
+    } else {
+      console.log("No emails found.");
+      setEmails([]);
     }
-  };
+  } catch (err) {
+    console.error("Error fetching emails from Firebase", err);
+  }
+};
 
-  // ✅ Email Handlers
+
+  // // Fetch Emails from Gmail
+  // const fetchEmails = async () => {
+  //   try {
+  //     const res = await gapi.client.gmail.users.messages.list({
+  //       userId: "me",
+  //       maxResults: 15,
+  //     });
+
+  //     const messages = res.result.messages || [];
+
+  //     const emailData = await Promise.all(
+  //       messages.map(async (msg) => {
+  //         const detail = await gapi.client.gmail.users.messages.get({
+  //           userId: "me",
+  //           id: msg.id,
+  //         });
+
+  //         const headers = detail.result.payload.headers;
+  //         const from = headers.find((h) => h.name === "From")?.value || "Unknown";
+  //         const subject = headers.find((h) => h.name === "Subject")?.value || "(No Subject)";
+  //         let body = "";
+
+  //         const parts = detail.result.payload.parts;
+  //         if (parts) {
+  //           const htmlPart = parts.find(part => part.mimeType === "text/html");
+  //           if (htmlPart) {
+  //             body = atob(htmlPart.body.data.replace(/-/g, '+').replace(/_/g, '/'));
+  //           } else {
+  //             const textPart = parts.find(part => part.mimeType === "text/plain");
+  //             if (textPart) {
+  //               body = atob(textPart.body.data.replace(/-/g, '+').replace(/_/g, '/'));
+  //             }
+  //           }
+  //         } else if (detail.result.payload.body?.data) {
+  //           body = atob(detail.result.payload.body.data.replace(/-/g, '+').replace(/_/g, '/'));
+  //         }
+
+  //         const isUnread = detail.result.labelIds.includes("UNREAD");
+
+  //         return {
+  //           id: msg.id,
+  //           sender: from,
+  //           subject,
+  //           body,
+  //           read: !isUnread,
+  //           starred: false,
+  //           deleted: false,
+  //           date: new Date().toISOString(),
+  //         };
+  //       })
+  //     );
+
+  //     setEmails(emailData);
+  //   } catch (err) {
+  //     console.error("Error fetching emails", err);
+  //   }
+  // };
+
+  // Email Handlers
   const handleToggleRead = (id) => {
     setEmails((prev) =>
       prev.map((email) =>
@@ -155,30 +186,30 @@ export default function Dashboard({ accessToken, user, onSignOut }) {
   const handleSendEmail = async (newEmail) => {
     try {
       const emailContent =
-      `From: me\n`+
-      `To: ${newEmail.to}\n`+
-        `Subject: ${newEmail.subject}\n\n`+
-       `${newEmail.body}`;
-  
+        `From: me\n` +
+        `To: ${newEmail.to}\n` +
+        `Subject: ${newEmail.subject}\n\n` +
+        `${newEmail.body}`;
+
       const base64EncodedEmail = btoa(emailContent)
         .replace(/\+/g, '-')
         .replace(/\//g, '_')
         .replace(/=+$/, '');
-  
+
       await gapi.client.gmail.users.messages.send({
         userId: 'me',
         resource: {
           raw: base64EncodedEmail,
         },
       });
-  
+
       console.log("Email sent successfully!");
-  
+
       const newId = Math.max(0, ...emails.map(e => parseInt(e.id, 10)), ...sentEmails.map(e => parseInt(e.id, 10))) + 1;
-  
+
       const sent = { ...newEmail, id: newId, read: true, starred: false, deleted: false };
       setSentEmails([sent, ...sentEmails]);
-  
+
       setActiveSection("Inbox");
       setReplyEmail(null);
     } catch (error) {
