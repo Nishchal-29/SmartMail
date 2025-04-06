@@ -42,7 +42,7 @@ export default function Navbar({ onSearch, onMenuClick, onSignOut, user }) {
           <img
             src={user?.imageUrl}
             alt="User"
-            className="w-6 h-6 rounded-full border border-white"
+            className="w-7 h-7 rounded-full border border-white"
           />
           <span>{user?.name?.split(" ")[0]} ▾</span>
         </button>
@@ -54,7 +54,7 @@ export default function Navbar({ onSearch, onMenuClick, onSignOut, user }) {
                 onClick={onSignOut}
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm"
               >
-                🚪 Sign Out
+                 Sign Out
               </li>
             </ul>
           </div>

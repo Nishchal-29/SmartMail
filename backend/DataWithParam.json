@@ -1,0 +1,1336 @@
+[
+    {
+      "id": "1",
+      "email": "Subject: Formal Announcement: Promotion of Washing Machine Model X\n\nEsteemed Valued Partners and Clients,\n\nIt is with considerable pleasure that we, Y, formally announce a special promotional initiative concerning our esteemed Washing Machine Model X.\n\nThis promotion is designed to provide an exceptional opportunity to acquire our flagship washing machine, renowned for its superior performance, energy efficiency, and innovative design. Model X represents the pinnacle of our engineering expertise and commitment to providing unparalleled laundry solutions.\n\nDetailed information regarding the specifics of this promotion, including applicable dates, terms, and conditions, is available upon request. We encourage you to contact your designated Y representative or visit our official website at [Insert Website Address Here] for a comprehensive overview.\n\nWe firmly believe that this promotional offering presents a mutually beneficial opportunity, allowing you to provide your clientele with access to a premium appliance while simultaneously enhancing your business prospects.\n\nWe remain steadfast in our commitment to providing exceptional products and services and are confident that this promotion will further solidify our mutually beneficial relationship.\n\nThank you for your continued trust and partnership.\n\nSincerely,\n\nThe Management of Y",
+      "response": "Subject: Re: Formal Announcement: Promotion of Washing Machine Model X\n\nTo Whom It May Concern,\n\nPlease remove the email address associated with Test_user from your mailing list. We do not wish to receive further promotional materials.\n\nThank you for your prompt attention to this matter.",
+      "metadata": {
+        "conciseness": 0.756,
+        "tone": "Formal, Polite, Assertive",
+        "category": "Promotional, Request",
+        "negotiation_style": "Assertive, Dismissive, Resistant",
+        "top_phrases": [
+          "('subject formal', np.int64(1))",
+          "('formal announcement', np.int64(1))",
+          "('announcement promotion', np.int64(1))",
+          "('promotion washing', np.int64(1))",
+          "('washing machine', np.int64(1))",
+          "('machine model', np.int64(1))",
+          "('model concern', np.int64(1))",
+          "('concern remove', np.int64(1))",
+          "('remove email', np.int64(1))",
+          "('email address', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "email": "Subject: Leave Request - [Your Name]\n\nDear [Manager's Name],\n\nI am writing to request a leave of absence for three days next week, from [Start Date] to [End Date].\n\nI need to attend to a personal emergency that requires my immediate attention. I understand that taking time off can be disruptive, and I apologize for any inconvenience this may cause.\n\nI've already [mention any steps you've taken to prepare for your absence, e.g., completed urgent tasks, delegated responsibilities, prepared handover notes]. I will also be checking emails periodically for anything urgent.\n\nPlease let me know if you require any further information. Thanks for your understanding.\n\nBest,\n\n[Your Name]",
+      "response": "Subject: Re: Leave Request - [Your Name]\n\nDear [Your Name],\n\nThis email confirms that your leave request for [Start Date] to [End Date] has been approved.\n\nPlease ensure you update the team about your absence and delegate any urgent tasks before you leave.\n\nThanks,\n[Manager's Name]",
+      "metadata": {
+        "conciseness": 0.702,
+        "tone": "Formal, Polite, Neutral",
+        "category": "Request, Transactional",
+        "negotiation_style": "Cooperative",
+        "top_phrases": [
+          "('leave request', np.int64(2))",
+          "('subject leave', np.int64(1))",
+          "('request dear', np.int64(1))",
+          "('dear email', np.int64(1))",
+          "('email confirms', np.int64(1))",
+          "('confirms leave', np.int64(1))",
+          "('request start', np.int64(1))",
+          "('start date', np.int64(1))",
+          "('date end', np.int64(1))",
+          "('end date', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "email": "Subject: Request for Extension - [Your Name] - [Course Name] - [Project Name]\n\nDear Professor [Professor's Last Name],\n\nI am writing to respectfully request a two-day extension on the deadline for the [Project Name] assignment in [Course Name]. The original deadline is [Original Deadline Date]. I would be grateful if I could have an extension until [Requested Deadline Date].\n\nI have recently been experiencing some health issues that have unfortunately impacted my ability to focus on and complete the project to the best of my ability by the original deadline. I have been seeking appropriate medical attention and am taking steps to address the situation.\n\nI understand the importance of meeting deadlines and I apologize for any inconvenience this request may cause. I am committed to completing this assignment to a high standard and believe that a short extension would allow me to do so.\n\nThank you for considering my request. I am available to discuss this further during your office hours or at your convenience.\n\nSincerely,\n\n[Your Name]\n[Your Student ID Number]",
+      "response": "Subject: Re: Request for Extension - [Your Name] - [Course Name] - [Project Name]\n\nDear [Your Name],\n\nI have received your request for an extension on the [Project Name] assignment in [Course Name].\n\nAn extension until [Requested Deadline Date] is hereby granted.\n\nPlease prioritize your health and well-being.\n\nSincerely,\n\nProfessor [Professor's Last Name]",
+      "metadata": {
+        "conciseness": 0.836,
+        "tone": "Formal, Polite, Neutral",
+        "category": "Request, Informational",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('request extension', np.int64(2))",
+          "('subject request', np.int64(1))",
+          "('extension course', np.int64(1))",
+          "('course project', np.int64(1))",
+          "('project dear', np.int64(1))",
+          "('dear received', np.int64(1))",
+          "('received request', np.int64(1))",
+          "('extension project', np.int64(1))",
+          "('project assignment', np.int64(1))",
+          "('assignment course', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "email": "Hey there,\n\nJust wanted to let you know that my recent t-shirt order arrived today, and unfortunately, it has a small tear near the bottom. I was really looking forward to wearing it, so I'm a little bummed.\n\nI've attached a picture so you can see what I'm talking about.\n\nIs there anything that can be done about this? I'm hoping we can figure something out.\n\nThanks a bunch!",
+      "response": "Subject: Re: T-shirt Order - A Little Issue\n\nHey!\n\nThanks for reaching out and sorry to hear about the tear in your new t-shirt! That's definitely not what we want you to experience.\n\nI took a look at the picture you sent, and yeah, I see the problem.\n\nWe'd be happy to send you a replacement right away, or if you'd prefer, we can issue a refund. Just let me know which option works best for you!\n\nAgain, really sorry for the hassle!",
+      "metadata": {
+        "conciseness": 0.824,
+        "tone": "Friendly, Polite, Apologetic",
+        "category": "Complaint, Apology, Request",
+        "negotiation_style": "Cooperative, Empathetic, Persuasive, Compromising",
+        "top_phrases": [
+          "('subject shirt', np.int64(1))",
+          "('shirt order', np.int64(1))",
+          "('order little', np.int64(1))",
+          "('little issue', np.int64(1))",
+          "('issue hey', np.int64(1))",
+          "('hey thanks', np.int64(1))",
+          "('thanks reaching', np.int64(1))",
+          "('reaching sorry', np.int64(1))",
+          "('sorry hear', np.int64(1))",
+          "('hear tear', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "email": "Subject: Quick Sync - Project [Project Name]\n\nHey Team,\n\nHope you're all having a productive week!\n\nJust wanted to propose a quick sync-up to align on where we're all at with Project [Project Name]. It would be great to share updates and make sure we're all on the same page moving forward.\n\nWould anyone be available for a brief meeting sometime next week? Please let me know what times work best for you.\n\nThanks a bunch!\n\nBest,\n\n[Your Name]",
+      "response": "Subject: Re: Quick Sync - Project [Project Name]\n\nHi [Your Name],\n\nThanks for organizing this. I'm happy to join the sync-up.\n\nI'm available Tuesday afternoon at 2 PM. Let me know if that works for the group.\n\nThanks,\n\n[Colleague's Name]",
+      "metadata": {
+        "conciseness": 0.79,
+        "tone": "Polite, Friendly, Grateful, Neutral",
+        "category": "Professional, Request",
+        "negotiation_style": "Cooperative, Compromising",
+        "top_phrases": [
+          "('subject quick', np.int64(1))",
+          "('quick sync', np.int64(1))",
+          "('sync project', np.int64(1))",
+          "('project project', np.int64(1))",
+          "('project hi', np.int64(1))",
+          "('hi thanks', np.int64(1))",
+          "('thanks organizing', np.int64(1))",
+          "('organizing happy', np.int64(1))",
+          "('happy join', np.int64(1))",
+          "('join sync', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "email": "Hey!\n\nWhat's up? Listen, I'm throwing a little house party this weekend and you HAVE to come!\n\nThink good music, maybe some questionable dance moves (mostly from me, let's be real), a bunch of silly games, and enough food to feed a small army. Seriously, I went a little overboard at the grocery store.\n\nIt's gonna be super chill, just a bunch of us hanging out, catching up, and generally being goofballs. No pressure to dress up or anything, just come as you are and be ready to have some laughs.\n\nIt's kicking off Friday night and going all weekend, so feel free to swing by whenever you can. Crash here if you want, we've got plenty of space (on the floor, maybe a couch if you're lucky!).\n\nLet me know if you can make it so I can mentally prepare for your awesomeness. ;)\n\nLater!\n\n[Your Name]",
+      "response": "Subject: Re: PARTY TIME!!!\n\nDude!\n\nThat sounds AMAZING! I'm so in!\n\nSeriously, questionable dance moves, silly games, and enough food to feed a small army? You're speaking my language.\n\nI'll definitely swing by Friday night and probably crash, floor space is totally fine by me.\n\nCan't wait to see you and everyone else! Get ready for my awesomeness! ;)",
+      "metadata": {
+        "conciseness": 0.802,
+        "tone": "Friendly, Grateful, Encouraging",
+        "category": "Informational",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('subject party', np.int64(1))",
+          "('party time', np.int64(1))",
+          "('time dude', np.int64(1))",
+          "('dude sounds', np.int64(1))",
+          "('sounds amazing', np.int64(1))",
+          "('amazing seriously', np.int64(1))",
+          "('seriously questionable', np.int64(1))",
+          "('questionable dance', np.int64(1))",
+          "('dance moves', np.int64(1))",
+          "('moves silly', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "email": "Subject: Inquiry Regarding Suspicious Charge - Account [Your Account Number]\n\nDear [Bank Name] Customer Service Department,\n\nI am writing to respectfully inquire about a charge appearing on my monthly credit card statement for account number [Your Account Number]. The charge, dated [Date of Charge] and in the amount of [Amount of Charge], is listed as [Description of Charge].\n\nUpon reviewing my recent transactions, I do not recognize this particular charge. I would be grateful if you could provide further clarification regarding this transaction, including the merchant's name and a detailed description of the goods or services purportedly rendered.\n\nI am concerned that this may be an unauthorized transaction, and I would appreciate your prompt attention to this matter. Please advise on the necessary steps to investigate this charge and, if deemed fraudulent, to dispute it accordingly.\n\nThank you for your time and assistance in resolving this matter. I look forward to your prompt response and clarification.\n\nSincerely,\n\n[Your Full Name]\n[Your Phone Number]\n[Your Email Address]",
+      "response": "Subject: Re: Inquiry Regarding Suspicious Charge - Account [Your Account Number]\n\nDear [Your Full Name],\n\nThis email acknowledges receipt of your inquiry regarding the transaction on your account, [Your Account Number].\n\nWe have reviewed the charge in question, dated [Date of Charge] for [Amount of Charge], listed as [Description of Charge]. The merchant associated with this transaction is [Merchant's Name].\n\nFor your convenience, we have attached a PDF copy of the receipt for this transaction, which provides a detailed description of the goods or services rendered.\n\nShould you require further clarification or wish to initiate a dispute, please do not hesitate to contact us at your earliest convenience. We are committed to assisting you in resolving this matter.\n\nSincerely,\n\n[Bank Name] Customer Service Department",
+      "metadata": {
+        "conciseness": 0.657,
+        "tone": "Formal, Polite, Neutral",
+        "category": "Inquiry, Informational",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('inquiry regarding', np.int64(2))",
+          "('account account', np.int64(2))",
+          "('account number', np.int64(2))",
+          "('account account number', np.int64(2))",
+          "('subject inquiry', np.int64(1))",
+          "('regarding suspicious', np.int64(1))",
+          "('suspicious charge', np.int64(1))",
+          "('charge account', np.int64(1))",
+          "('number dear', np.int64(1))",
+          "('dear email', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "email": "Subject: Application for Summer Internship - [Your Name]\n\nDear [Hiring Manager Name or \"Hiring Committee\"],\n\nI am writing to express my profound interest in the Summer Internship opportunity at [Startup Name], as advertised on [Platform where you saw the advertisement]. As a highly motivated and dedicated student pursuing a degree in [Your Major] at [Your University], I am eager to contribute my skills and enthusiasm to your innovative organization.\n\nMy academic pursuits have provided me with a strong foundation in computer science principles, with a particular focus on data analysis and machine learning. I possess a proficient understanding of Python programming, including experience with relevant libraries such as [List specific libraries, e.g., scikit-learn, TensorFlow, PyTorch]. Furthermore, I have actively engaged in projects involving [Briefly describe relevant projects, e.g., data modeling, algorithm development, predictive analytics], which have allowed me to hone my analytical and problem-solving abilities.\n\nI am particularly drawn to [Startup Name]'s work in [Mention specific area of the startup's work that interests you]. The opportunity to contribute to such groundbreaking endeavors, while gaining practical experience within a dynamic startup environment, is exceptionally appealing. I am confident that my skills and dedication align seamlessly with your requirements, and I am prepared to learn and adapt quickly to contribute meaningfully to your team's objectives.\n\nI have attached my resume for your thorough review, which further details my qualifications and accomplishments. I am available for an interview at your earliest convenience and welcome the opportunity to discuss my application further. Thank you for your time and consideration.\n\nSincerely,\n\n[Your Name]\n[Your Phone Number]\n[Your Email Address]\n[Link to your LinkedIn Profile (Optional)]",
+      "response": "Subject: Re: Application for Summer Internship - [Your Name]\n\nDear [Your Name],\n\nThank you for your application for the Summer Internship opportunity at [Startup Name]. We appreciate your interest in our organization.\n\nWe have reviewed your application materials and are impressed with your qualifications. We would like to invite you to an initial interview to discuss your application further.\n\nA member of our team will be in contact with you shortly to schedule a convenient time for this interview.\n\nWe look forward to speaking with you.\n\nSincerely,\n\n[Hiring Manager Name or \"Hiring Committee\"]\n[Startup Name]",
+      "metadata": {
+        "conciseness": 0.602,
+        "tone": "Formal, Polite, Encouraging",
+        "category": "Professional, Informational",
+        "negotiation_style": "Cooperative, Persuasive, Empathetic",
+        "top_phrases": [
+          "('application summer', np.int64(2))",
+          "('summer internship', np.int64(2))",
+          "('application summer internship', np.int64(2))",
+          "('subject application', np.int64(1))",
+          "('internship dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank application', np.int64(1))",
+          "('internship opportunity', np.int64(1))",
+          "('opportunity startup', np.int64(1))",
+          "('startup appreciate', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "9",
+      "email": "Subject: Project [Project Name] - Progress Update\n\nDear Team,\n\nThis email serves as a brief update on the progress of Project [Project Name].\n\nWe are currently at 75% completion and are on track to meet the established delivery deadline. The team continues to make steady progress, and we are addressing any challenges proactively.\n\nFurther updates will be provided as we approach the final stages of the project.\n\nSincerely,\n\n[Team Lead Name]",
+      "response": "Subject: Re: Project [Project Name] - Progress Update\n\nDear [Team Lead Name],\n\nThank you for the update on Project [Project Name].\n\nThe progress reported is encouraging. To ensure continued alignment and address any potential roadblocks, I would like to propose a brief review call mid-week. Please let me know your availability.\n\nSincerely,\n\n[Your Name/Project Manager Name]",
+      "metadata": {
+        "conciseness": 0.761,
+        "tone": "Formal, Polite, Encouraging",
+        "category": "Informational, Request",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('project project', np.int64(2))",
+          "('project progress', np.int64(2))",
+          "('project project progress', np.int64(2))",
+          "('subject project', np.int64(1))",
+          "('progress update', np.int64(1))",
+          "('update dear', np.int64(1))",
+          "('dear team', np.int64(1))",
+          "('team lead', np.int64(1))",
+          "('lead thank', np.int64(1))",
+          "('thank update', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "email": "Dear [Teacher's Name],\n\nI am writing to you today with a respectful inquiry regarding my child, [Child's Name], and their progress in your [Subject] class. I am keen to understand their academic performance and overall behavior within the classroom setting.\n\nI would be grateful if you could provide me with some insight into [Child's Name]'s current standing in your class. Specifically, I am interested in learning about their engagement in class, their understanding of the material, and any areas where they may be excelling or experiencing challenges.\n\nFurthermore, I would appreciate any observations you may have regarding their classroom behavior and interactions with their peers. Any information you can share regarding their participation and conduct would be greatly appreciated.\n\nPlease let me know if there is a convenient time for us to discuss this further, either via email, phone, or a brief meeting. I am committed to supporting [Child's Name]'s success and believe that open communication between parents and educators is crucial.\n\nThank you for your time and consideration. I look forward to hearing from you soon.\n\nSincerely,\n\n[Your Name]\n[Your Phone Number]\n[Your Email Address]",
+      "response": "Subject: Re: Inquiry Regarding [Child's Name] in [Subject] Class\n\nDear [Your Name],\n\nThank you for your email and your interest in [Child's Name]'s progress in my [Subject] class. I appreciate your proactive approach to supporting their education.\n\nI am happy to provide you with detailed feedback on [Child's Name]'s performance. [Child's Name] is currently [briefly describe their academic standing, e.g., \"performing well and demonstrating a good understanding of the material,\" or \"showing improvement in their understanding of the concepts,\" or \"currently working to improve their grasp of the material\"]. They are [describe their engagement in class, e.g., \"an active participant in class discussions,\" or \"generally engaged in class activities,\" or \"sometimes hesitant to participate but is making an effort\"].\n\nRegarding areas of strength, [mention specific examples, e.g., \"they excel in problem-solving,\" or \"they demonstrate a strong understanding of [specific topic]\"]. As for areas where they may be experiencing challenges, [mention specific examples, e.g., \"they could benefit from further practice with [specific skill],\" or \"they sometimes struggle with [specific concept]\"].\n\nIn terms of classroom behavior and interactions, [Child's Name] is [describe their behavior, e.g., \"a respectful and well-behaved student,\" or \"generally cooperative and interacts positively with their peers,\" or \"working on improving their focus during independent work\"].\n\nI would be happy to schedule a time to discuss this further. Please let me know what time works best for you. I am available [list your availability, e.g., \"after school on Tuesdays and Thursdays,\" or \"any weekday afternoon\"]. We can connect via phone or a brief meeting, whichever is most convenient for you.\n\nThank you again for reaching out. I look forward to speaking with you soon.\n\nSincerely,\n\n[Teacher's Name]",
+      "metadata": {
+        "conciseness": 0.783,
+        "tone": "Formal, Polite, Friendly, Grateful",
+        "category": "Inquiry, Informational",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('subject class', np.int64(2))",
+          "('mention specific', np.int64(2))",
+          "('specific examples', np.int64(2))",
+          "('mention specific examples', np.int64(2))",
+          "('subject inquiry', np.int64(1))",
+          "('inquiry regarding', np.int64(1))",
+          "('regarding child', np.int64(1))",
+          "('child subject', np.int64(1))",
+          "('class dear', np.int64(1))",
+          "('dear thank', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "11",
+      "email": "Subject: Checking in on Order #[Order Number Here]\n\nHi [Company Name] Team,\n\nHope you're all having a good week!\n\nI'm writing to check in on order #[Order Number Here], which I placed on [Date of Order]. The expected delivery date was [Original Delivery Date], and I haven't received it yet.\n\nI understand that things can sometimes get delayed, but I was hoping to get an update on when I might expect it to arrive. I was really looking forward to receiving it!\n\nThanks so much for your time and any information you can provide.\n\nBest,\n\n[Your Name]",
+      "response": "Subject: Re: Checking in on Order #[Order Number Here]\n\nHi [Your Name],\n\nSo sorry about the delay with your order! We're really sorry it hasn't arrived yet.\n\nWe've looked into it and it looks like there was a slight hiccup on our end. We're working to get it shipped out to you ASAP.\n\nTo make up for the inconvenience, we'll upgrade your shipping to express, free of charge. You should receive a new tracking update within 24 hours.\n\nThanks so much for your patience and understanding!\n\nBest,\n\n[Company Name] Team",
+      "metadata": {
+        "conciseness": 0.82,
+        "tone": "Polite, Apologetic, Friendly, Grateful",
+        "category": "Inquiry, Request, Apology, Informational",
+        "negotiation_style": "Cooperative, Empathetic, Persuasive, Compromising",
+        "top_phrases": [
+          "('subject checking', np.int64(1))",
+          "('checking order', np.int64(1))",
+          "('order order', np.int64(1))",
+          "('order number', np.int64(1))",
+          "('number hi', np.int64(1))",
+          "('hi sorry', np.int64(1))",
+          "('sorry delay', np.int64(1))",
+          "('delay order', np.int64(1))",
+          "('order really', np.int64(1))",
+          "('really sorry', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "email": "Subject: Request for Mentorship/Guidance - [Your Name]\n\nDear [Senior Engineer's Name],\n\nMy name is [Your Name], and I am a junior developer on the [Team Name/Project Name] team. I am writing to you today as I greatly admire your expertise and experience within the company, particularly your work on [mention a specific project or area of their expertise if known].\n\nAs I continue to develop my skills and knowledge, I am eager to learn from experienced engineers like yourself. I would be incredibly grateful if you would consider offering me mentorship or occasional guidance. I am particularly interested in learning more about [mention specific areas you'd like to learn about, e.g., best practices for X, debugging techniques for Y, etc.].\n\nI understand your time is valuable, and I would be respectful of your schedule. I am flexible and happy to work around your availability, whether that be through brief check-ins, code reviews, or answering specific questions as they arise.\n\nThank you for considering my request. I am highly motivated to learn and contribute to the team, and I believe your guidance would be invaluable in my professional development. Please let me know if this is something you would be open to.\n\nSincerely,\n\n[Your Name]\n[Your Job Title]",
+      "response": "Subject: Re: Request for Mentorship/Guidance - [Your Name]\n\nDear [Your Name],\n\nThank you for your email and your interest in my mentorship. I am happy to offer you guidance as you develop your skills.\n\nI am available to connect on the following days/times:\n\n*   [Day], [Time]\n*   [Day], [Time]\n\nPlease let me know if either of these times work for you, or if you have other scheduling preferences. I look forward to working with you.\n\nSincerely,\n\n[Senior Engineer's Name]",
+      "metadata": {
+        "conciseness": 0.729,
+        "tone": "Formal, Polite, Friendly, Encouraging, Grateful",
+        "category": "Request, Professional",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('day time', np.int64(2))",
+          "('subject request', np.int64(1))",
+          "('request mentorship', np.int64(1))",
+          "('mentorship guidance', np.int64(1))",
+          "('guidance dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank email', np.int64(1))",
+          "('email mentorship', np.int64(1))",
+          "('mentorship happy', np.int64(1))",
+          "('happy offer', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "13",
+      "email": "Hey!\n\nOMG, so pumped for this trip! Just wanted to bug you about the flights and stuff. What time are you landing? And where are you staying?\n\nAlso, any thoughts on what we're doing first? I'm down for anything, seriously! Let me know if you have any ideas or if you've already made some plans. \n\nCan't wait to see you! \n\nTalk soon,\n[Your Name]",
+      "response": "Subject: Re: TRIP TIME!!! \n\nHey!\n\nSo excited too!! \n\nMy flight lands at like, 2 PM-ish. I'm staying at The Cozy Corner Inn [location], it's supposed to be pretty cute.\n\nAs for what we're doing first... how about hitting up that new brewery, \"Hops & Dreams\"? Heard they have amazing IPAs. Or we could just chill at the Inn and catch up!\n\nLet me know what you think! Can't wait!! \n\nLater,\n[Your Name]",
+      "metadata": {
+        "conciseness": 0.791,
+        "tone": "Friendly, Polite, Encouraging",
+        "category": "Informational",
+        "negotiation_style": "Cooperative, Persuasive, Empathetic",
+        "top_phrases": [
+          "('subject trip', np.int64(1))",
+          "('trip time', np.int64(1))",
+          "('time hey', np.int64(1))",
+          "('hey excited', np.int64(1))",
+          "('excited flight', np.int64(1))",
+          "('flight lands', np.int64(1))",
+          "('lands like', np.int64(1))",
+          "('like pm', np.int64(1))",
+          "('pm ish', np.int64(1))",
+          "('ish staying', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "14",
+      "email": "Dear [Investor Name],\n\nMy name is [Founder Name], and I am the founder of [Startup Name]. We are developing [brief, compelling description of product/service] which addresses the critical need for [problem the product solves] by [how the product solves the problem].\n\nWe have achieved [mention key milestones, e.g., early traction, pilot program success, key partnerships] and are seeking to raise [amount] in seed funding to [explain how the funding will be used, e.g., scale our operations, expand our team, finalize product development].\n\nWe have been following your investment portfolio with great interest, particularly your investments in [mention specific companies or areas of interest]. We believe that [Startup Name] aligns well with your investment thesis and offers a significant opportunity for return.\n\nWould you be available for a brief meeting sometime during the week of [Date Range] to discuss our product and business plan in more detail? We are flexible and happy to accommodate your schedule.\n\nThank you for your time and consideration. We look forward to hearing from you soon.\n\nSincerely,\n\n[Founder Name]\n\n[Founder Title]\n\n[Startup Name]\n\n[Website]",
+      "response": "Subject: Re: Investment Opportunity - [Startup Name]\n\nDear [Founder Name],\n\nThank you for your email and the compelling overview of [Startup Name]. I am interested in learning more.\n\nI am available for a meeting during the week of [Date Range]. Please send me your availability.\n\nSincerely,\n\n[Investor Name]",
+      "metadata": {
+        "conciseness": 0.767,
+        "tone": "Formal, Polite, Neutral, Friendly",
+        "category": "Professional, Inquiry",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('subject investment', np.int64(1))",
+          "('investment opportunity', np.int64(1))",
+          "('opportunity startup', np.int64(1))",
+          "('startup dear', np.int64(1))",
+          "('dear founder', np.int64(1))",
+          "('founder thank', np.int64(1))",
+          "('thank email', np.int64(1))",
+          "('email compelling', np.int64(1))",
+          "('compelling overview', np.int64(1))",
+          "('overview startup', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "15",
+      "email": "Subject: Following Up: Logo Design Progress\n\nDear [Freelancer Name],\n\nI am writing to follow up on the progress of the logo design project. Could you please provide an update on the current status and estimated completion timeline?\n\nThank you for your time and attention to this matter.\n\nSincerely,\n\n[Your Name]\n[Your Title/Company]",
+      "response": "Subject: Re: Following Up: Logo Design Progress\n\nDear [Your Name],\n\nThank you for your email.\n\nI am pleased to provide an update on the logo design project. The design is progressing well, and I have attached a draft preview for your review.\n\nI anticipate the final delivery of the completed logo design within [Number] business days, by [Date].\n\nPlease let me know if you have any questions or require any revisions after reviewing the draft.\n\nSincerely,\n\n[Freelancer Name]",
+      "metadata": {
+        "conciseness": 0.636,
+        "tone": "Formal, Polite, Grateful, Neutral",
+        "category": "Professional, Informational",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('logo design', np.int64(3))",
+          "('subject following', np.int64(1))",
+          "('following logo', np.int64(1))",
+          "('design progress', np.int64(1))",
+          "('progress dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank email', np.int64(1))",
+          "('email pleased', np.int64(1))",
+          "('pleased provide', np.int64(1))",
+          "('provide update', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "16",
+      "email": "Subject: Invoice Correction Request - [Invoice Number]\n\nDear [Name of Contact Person],\n\nThis email concerns invoice number [Invoice Number], dated [Date of Invoice]. We have identified a discrepancy in the pricing for [Specific item or service] as detailed on the invoice.\n\nThe correct price for [Specific item or service] should be [Correct Price], as per our agreed-upon terms outlined in [Reference to agreement, contract, or quote]. The invoice currently reflects a price of [Incorrect Price].\n\nWe kindly request that you issue a corrected invoice reflecting the accurate pricing. Please forward the revised invoice to [Your Accounts Payable Contact Person] at [Their Email Address].\n\nThank you for your prompt attention to this matter. We appreciate your assistance in resolving this issue.\n\nSincerely,\n\n[Your Name/Company Name]",
+      "response": "Subject: Re: Invoice Correction Request - [Invoice Number]\n\nDear [Your Name/Company Name],\n\nThank you for bringing this to our attention.\n\nWe have reviewed invoice number [Invoice Number] and acknowledge the pricing discrepancy. A corrected invoice reflecting the accurate price of [Correct Price] for [Specific item or service] has been issued.\n\nThe revised invoice has been forwarded to [Your Accounts Payable Contact Person] at [Their Email Address].\n\nWe apologize for any inconvenience this may have caused.\n\nSincerely,\n\n[Name of Accountant/Company Name]",
+      "metadata": {
+        "conciseness": 0.618,
+        "tone": "Formal, Polite, Apologetic, Grateful",
+        "category": "Request, Apology, Transactional",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('invoice number', np.int64(3))",
+          "('subject invoice', np.int64(1))",
+          "('invoice correction', np.int64(1))",
+          "('correction request', np.int64(1))",
+          "('request invoice', np.int64(1))",
+          "('number dear', np.int64(1))",
+          "('dear company', np.int64(1))",
+          "('company thank', np.int64(1))",
+          "('thank bringing', np.int64(1))",
+          "('bringing attention', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "17",
+      "email": "Subject: Bug Report - File Upload Crashing\n\nHey Team,\n\nJust wanted to flag a potential bug I've run into with the application. I've been trying to upload some larger files, and it seems like the app consistently crashes during the upload process.\n\nI've tried a few different file types, all of which are over [Specify file size, e.g., 50MB], and the crash happens pretty consistently. I'm running [Specify OS and version, e.g., Windows 10, version 20H2] and the application version is [Specify application version, if known].\n\nLet me know if you need any more info, like specific file types or error messages (if any). Happy to help troubleshoot further!\n\nCheers,\n[Your Name]",
+      "response": "Subject: Re: Bug Report - File Upload Crashing\n\nHey [Your Name],\n\nThanks for the heads-up! We've logged the issue and are working on a fix. It should be included in the next release.\n\nThanks again for letting us know!\n\nBest,\n[Developer/Support Engineer Name]",
+      "metadata": {
+        "conciseness": 0.789,
+        "tone": "Friendly, Grateful, Polite, Neutral",
+        "category": "Complaint, Informational",
+        "negotiation_style": "Cooperative, Dismissive",
+        "top_phrases": [
+          "('subject bug', np.int64(1))",
+          "('bug report', np.int64(1))",
+          "('report file', np.int64(1))",
+          "('file upload', np.int64(1))",
+          "('upload crashing', np.int64(1))",
+          "('crashing hey', np.int64(1))",
+          "('hey thanks', np.int64(1))",
+          "('thanks heads', np.int64(1))",
+          "('heads ve', np.int64(1))",
+          "('ve logged', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "18",
+      "email": "Subject: Catch Up & Connect! You're Invited to a Networking Event!\n\nHi everyone,\n\nHope you're doing well!\n\nOur alumni team is super excited to invite you to a networking event on [Date of event] at [Time of event] at [Location of event - or online platform].\n\nIt's a fantastic opportunity to reconnect with fellow alumni, hear about what everyone's been up to, and maybe even make some new connections in your field! We'll have [Mention any activities, e.g., guest speakers, food and drinks, etc.].\n\nWe'd love for you to join us! You can RSVP by [RSVP link or email address] by [RSVP deadline].\n\nFeel free to reach out if you have any questions.\n\nLooking forward to seeing you there!\n\nBest,\n\n[Your Name/Alumni Coordinator Name]\n[University Name] Alumni Office",
+      "response": "Subject: Re: Catch Up & Connect! You're Invited to a Networking Event!\n\nHi [Your Name/Alumni Coordinator Name],\n\nThanks so much for the invite! I'll definitely be there and am looking forward to catching up with everyone.\n\nSee you then!\n\nBest,\n\n[Your Name]",
+      "metadata": {
+        "conciseness": 0.728,
+        "tone": "Polite, Friendly, Grateful",
+        "category": "Promotional, Informational, Request",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('subject catch', np.int64(1))",
+          "('catch connect', np.int64(1))",
+          "('connect invited', np.int64(1))",
+          "('invited networking', np.int64(1))",
+          "('networking event', np.int64(1))",
+          "('event hi', np.int64(1))",
+          "('hi alumni', np.int64(1))",
+          "('alumni coordinator', np.int64(1))",
+          "('coordinator thanks', np.int64(1))",
+          "('thanks invite', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "19",
+      "email": "Hey [Friend's Name],\n\nSo you need a new laptop, huh? Awesome! And you're on a budget, gotcha. Spill the beans \u2013 how much are we talking? Like, what's the absolute max you can spend?\n\nOnce I know that, I can totally throw some ideas your way. There are actually some pretty decent laptops out there these days that won't totally break the bank. \n\nLet me know the budget and we'll get this laptop hunt started!\n\nTalk soon,\n[Your Name]",
+      "response": "Subject: Re: Laptop Hunting!\n\nHey [Your Name],\n\nYep, new laptop time! Aiming for around $800, maybe a *little* wiggle room if it's REALLY worth it.\n\nOkay, so I've been doing some digging (aka, window shopping online, haha). Here's what I'm thinking:\n\n*   **Option 1: Acer Aspire 5.** I've heard good things about these! They seem to pack a decent punch for the price, and you can usually find one with a good processor and enough RAM for everyday stuff. Plus, they're pretty sleek looking.\n\n*   **Option 2: Refurbished Lenovo ThinkPad.** Hear me out! You can often snag a really solid ThinkPad (they're built like tanks!) for a steal if it's refurbished. They're super reliable and have great keyboards. Just make sure you buy from a reputable seller!\n\nWhatcha think? Let me know!",
+      "metadata": {
+        "conciseness": 0.783,
+        "tone": "Friendly, Polite",
+        "category": "Inquiry, Feedback",
+        "negotiation_style": "Cooperative, Compromising, Persuasive",
+        "top_phrases": [
+          "('subject laptop', np.int64(1))",
+          "('laptop hunting', np.int64(1))",
+          "('hunting hey', np.int64(1))",
+          "('hey yep', np.int64(1))",
+          "('yep new', np.int64(1))",
+          "('new laptop', np.int64(1))",
+          "('laptop time', np.int64(1))",
+          "('time aiming', np.int64(1))",
+          "('aiming 800', np.int64(1))",
+          "('800 maybe', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "20",
+      "email": "Dear Mr./Ms. [Acquaintance's Last Name],\n\nI hope this correspondence finds you well.\n\nI am writing to respectfully request your assistance. I am applying for the [Job Title] position at [Company Name], and I would be most grateful if you would consider providing a referral on my behalf.\n\nYour professional opinion and insights are highly valued, and any support you could offer would be greatly appreciated. I have attached my resume for your review.\n\nThank you for your time and consideration. I eagerly await your response.\n\nSincerely,\n\n[Your Name]",
+      "response": "Subject: Re: Referral Request - [Job Title] Position at [Company Name]\n\nDear Mr./Ms. [Your Name],\n\nThank you for your email. I would be pleased to offer my support for your application for the [Job Title] position at [Company Name].\n\nPlease forward your resume at your earliest convenience. I will review it and submit a referral accordingly.\n\nI wish you the best of luck in your application.\n\nSincerely,\n\n[Acquaintance's Last Name]",
+      "metadata": {
+        "conciseness": 0.646,
+        "tone": "Formal, Polite, Friendly, Encouraging",
+        "category": "Request, Professional",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('job title', np.int64(2))",
+          "('title position', np.int64(2))",
+          "('position company', np.int64(2))",
+          "('job title position', np.int64(2))",
+          "('title position company', np.int64(2))",
+          "('subject referral', np.int64(1))",
+          "('referral request', np.int64(1))",
+          "('request job', np.int64(1))",
+          "('company dear', np.int64(1))",
+          "('dear mr', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "21",
+      "email": "Subject: Welcome to the [Company Name] Newsletter!\n\nDear [Subscriber Name],\n\nThis email confirms your subscription to the [Company Name] newsletter. We're happy to have you!\n\nYou can expect to receive regular updates from us, including [mention a few key topics, e.g., company news, product updates, special offers]. We aim to provide you with valuable and interesting content.\n\nIf you ever wish to unsubscribe, you can easily do so by clicking the \"Unsubscribe\" link at the bottom of any newsletter email.\n\nIn the meantime, you can visit our website at [Website Address] to learn more about [Company Name].\n\nThanks again for subscribing!\n\nSincerely,\n\nThe [Company Name] Team",
+      "response": "Subject: Re: Welcome to the [Company Name] Newsletter!\n\nDear [Company Name] Team,\n\nThis email concerns the recent subscription to your newsletter.\n\nPlease unsubscribe my email address from this service immediately.\n\nThank you.",
+      "metadata": {
+        "conciseness": 0.635,
+        "tone": "Formal, Assertive, Polite",
+        "category": "Promotional, Request",
+        "negotiation_style": "Assertive, Resistant",
+        "top_phrases": [
+          "('subject welcome', np.int64(1))",
+          "('welcome company', np.int64(1))",
+          "('company newsletter', np.int64(1))",
+          "('newsletter dear', np.int64(1))",
+          "('dear company', np.int64(1))",
+          "('company team', np.int64(1))",
+          "('team email', np.int64(1))",
+          "('email concerns', np.int64(1))",
+          "('concerns recent', np.int64(1))",
+          "('recent subscription', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "22",
+      "email": "Dear [Blogger's Name],\n\nMy name is [Author's Name], and I'm the author of a new book titled \"[Book Title],\" which was recently released on [Date of Release].\n\nI've been an avid reader of your blog, [Blog Name], for some time now, and I'm consistently impressed by your insightful reviews and thoughtful commentary on [Genre] literature. I particularly enjoyed your recent post on [Mention a specific post or review].\n\nI'm writing to you today to respectfully request if you would be interested in reviewing my book. \"[Book Title]\" is a [brief genre description] that explores [brief, intriguing synopsis]. I believe it would resonate with your readership, given your focus on [mention specific themes or interests of the blog].\n\nI would be happy to provide you with a digital copy of the book for review. Please let me know if this is something you might consider, and if so, what format you prefer.\n\nThank you for your time and consideration. I truly appreciate you taking the time to read this email.\n\nSincerely,\n\n[Author's Name]\n[Author's Website/Social Media Link (Optional)]",
+      "response": "Subject: Re: Review Request - [Book Title]\n\nDear [Author's Name],\n\nThank you for your email and for thinking of [Blog Name]. I've read your request and would be happy to consider reviewing \"[Book Title].\"\n\nI'm interested in reading it and will add it to my review queue. I anticipate being able to post a review within approximately [Number] weeks/months.\n\nI would prefer a digital copy in [Preferred Format, e.g., EPUB, MOBI, PDF].\n\nThank you again for reaching out.\n\nSincerely,\n\n[Blogger's Name]",
+      "metadata": {
+        "conciseness": 0.718,
+        "tone": "Formal, Polite, Friendly, Neutral",
+        "category": "Request, Informational",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('book title', np.int64(2))",
+          "('subject review', np.int64(1))",
+          "('review request', np.int64(1))",
+          "('request book', np.int64(1))",
+          "('title dear', np.int64(1))",
+          "('dear author', np.int64(1))",
+          "('author thank', np.int64(1))",
+          "('thank email', np.int64(1))",
+          "('email thinking', np.int64(1))",
+          "('thinking blog', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "23",
+      "email": "Subject: Thank You & Feedback Request: Design Workshop\n\nDear Attendees,\n\nOn behalf of the entire team, I would like to extend a sincere thank you for your participation in the recent Design Workshop. We were thrilled with the energy and engagement throughout the day, and we hope you found the sessions informative and valuable.\n\nWe are constantly striving to improve our workshops and provide the best possible experience for our attendees. To that end, we would be grateful if you could take a few minutes to share your feedback on the event. Your insights are invaluable to us.\n\nYou can access a short survey here: [Link to Survey]\n\nThe survey should take approximately [Estimated Time] to complete. Your responses will be kept confidential and used solely for the purpose of improving future workshops.\n\nThank you again for your participation. We look forward to seeing you at future events.\n\nSincerely,\n\n[Event Organizer Name/Organization Name]",
+      "response": "Subject: Re: Thank You & Feedback Request: Design Workshop\n\nDear [Event Organizer Name/Organization Name],\n\nThank you for the email and for organizing the Design Workshop. I appreciate the effort put into the event.\n\nI have completed the survey and provided my feedback. I hope my suggestions are helpful.\n\nSincerely,\n\n[Your Name]",
+      "metadata": {
+        "conciseness": 0.754,
+        "tone": "Formal, Polite, Grateful",
+        "category": "Informational, Feedback",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('design workshop', np.int64(2))",
+          "('subject thank', np.int64(1))",
+          "('thank feedback', np.int64(1))",
+          "('feedback request', np.int64(1))",
+          "('request design', np.int64(1))",
+          "('workshop dear', np.int64(1))",
+          "('dear event', np.int64(1))",
+          "('event organizer', np.int64(1))",
+          "('organizer organization', np.int64(1))",
+          "('organization thank', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "24",
+      "email": "Subject: Subscription Cancellation Request\n\nHi [Wellness Platform Name] Team,\n\nThis email is to request the cancellation of my subscription.\n\nPlease confirm when the cancellation will be processed.\n\nThanks,\n\n[Your Name]",
+      "response": "Subject: Re: Subscription Cancellation Request\n\nHi [Your Name],\n\nThanks for reaching out!\n\nWe've received your cancellation request and will process it shortly. You'll receive a confirmation email once it's complete.\n\nWe're really sorry to see you go! If you ever decide to come back, we'd love to have you. As a thank you for being a valued member, we'd be happy to offer you a [Discount Percentage]% discount on your next subscription.\n\nBest,\n\nThe [Wellness Platform Name] Team",
+      "metadata": {
+        "conciseness": 0.747,
+        "tone": "Polite, Friendly, Grateful, Encouraging",
+        "category": "Transactional, Request, Informational, Apology, Promotional",
+        "negotiation_style": "Cooperative, Persuasive, Empathetic",
+        "top_phrases": [
+          "('cancellation request', np.int64(2))",
+          "('subject subscription', np.int64(1))",
+          "('subscription cancellation', np.int64(1))",
+          "('request hi', np.int64(1))",
+          "('hi thanks', np.int64(1))",
+          "('thanks reaching', np.int64(1))",
+          "('reaching ve', np.int64(1))",
+          "('ve received', np.int64(1))",
+          "('received cancellation', np.int64(1))",
+          "('request process', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "25",
+      "email": "Subject: Uhhh, where's my stuff?! (Delivery Issue)\n\nHey [Company Name],\n\nSo, I was supposed to get a delivery today, order number [Order Number], and I was literally camped out at home all day waiting for it. Seriously, I didn't even leave the couch!\n\nBut... nothing. No delivery. Nada. Zip.\n\nI'm a little bummed, to be honest. I was really looking forward to [briefly mention what was ordered].\n\nCould you guys maybe look into what happened? Did the driver get lost? Did the package get abducted by aliens? (Okay, maybe not the aliens...)\n\nLet me know what's up and when I can expect my stuff. Thanks!\n\nCheers,\n[Your Name]",
+      "response": "Subject: Re: Uhhh, where's my stuff?! (Delivery Issue)\n\nHey [Your Name],\n\nOMG, so sorry about your missing delivery! That's totally not cool, especially when you were couch-locked all day.\n\nLet me check on order number [Order Number] right away. Looks like something went sideways, and I'm really bummed that happened.\n\nWe'll get this sorted for you ASAP. How about we reschedule your delivery for [Suggest a date/time window]? And I'll make sure it gets there this time!\n\nAgain, super sorry for the hassle!\n\nBest,\n[Your Name/Agent Name]",
+      "metadata": {
+        "conciseness": 0.812,
+        "tone": "Polite, Friendly, Apologetic, Urgent, Encouraging",
+        "category": "Complaint, Inquiry, Apology",
+        "negotiation_style": "Cooperative, Empathetic, Persuasive",
+        "top_phrases": [
+          "('order number', np.int64(2))",
+          "('subject uhhh', np.int64(1))",
+          "('uhhh stuff', np.int64(1))",
+          "('stuff delivery', np.int64(1))",
+          "('delivery issue', np.int64(1))",
+          "('issue hey', np.int64(1))",
+          "('hey omg', np.int64(1))",
+          "('omg sorry', np.int64(1))",
+          "('sorry missing', np.int64(1))",
+          "('missing delivery', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "26",
+      "email": "Dear [Clinic Name],\n\nI am writing to request information regarding available appointment slots for a routine check-up next week.\n\nMy name is [Patient Name], and I am a patient of Dr. [Doctor's Last Name]. I would appreciate it if you could let me know what days and times are open for a check-up.\n\nPlease let me know if you require any further information from my end.\n\nThank you for your time and assistance.\n\nSincerely,\n\n[Patient Name]\n[Patient Contact Number]",
+      "response": "Subject: Re: Appointment Request - Routine Check-up\n\nDear [Patient Name],\n\nThank you for your email.\n\nWe have the following appointment slots available for a routine check-up with Dr. [Doctor's Last Name] next week:\n\n*   [Date] at [Time]\n*   [Date] at [Time]\n*   [Date] at [Time]\n\nPlease let us know which time works best for you, and we will confirm your appointment.\n\nSincerely,\n\n[Receptionist Name/Clinic Name]",
+      "metadata": {
+        "conciseness": 0.455,
+        "tone": "Formal, Polite, Neutral",
+        "category": "Inquiry, Informational, Request",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('date time', np.int64(3))",
+          "('routine check', np.int64(2))",
+          "('time date', np.int64(2))",
+          "('date time date', np.int64(2))",
+          "('time date time', np.int64(2))",
+          "('subject appointment', np.int64(1))",
+          "('appointment request', np.int64(1))",
+          "('request routine', np.int64(1))",
+          "('check dear', np.int64(1))",
+          "('dear patient', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "27",
+      "email": "Dear Admissions Office,\n\nI am writing to inquire about the availability of merit-based scholarships for prospective undergraduate students at [University Name]. I am a high school student at [High School Name] and am highly interested in attending your institution.\n\nCould you please provide information regarding the eligibility requirements for these scholarships, including any specific academic criteria, standardized test score expectations, or other relevant qualifications?\n\nFurthermore, I would appreciate it if you could clarify the application deadlines for these scholarships. Are they concurrent with the general application deadline, or are there separate deadlines that I should be aware of?\n\nThank you for your time and consideration. I look forward to hearing from you soon.\n\nSincerely,\n\n[Your Name]\n[Your Email Address]\n[Your Phone Number (Optional)]",
+      "response": "Subject: Re: Inquiry Regarding Merit-Based Scholarships - [Your Name]\n\nDear [Your Name],\n\nThank you for your interest in merit-based scholarships at [University Name]. We are pleased to provide you with the following information.\n\nEligibility for our merit-based scholarships is primarily based on academic achievement, demonstrated leadership, and extracurricular involvement. Specific criteria include:\n\n*   A strong academic record, typically including a high GPA and rigorous coursework.\n*   Competitive scores on standardized tests such as the SAT or ACT.\n*   Demonstrated leadership experience in school or community activities.\n*   Compelling essays and letters of recommendation.\n\nApplication deadlines for merit-based scholarships are generally concurrent with the general undergraduate application deadline. Please refer to the following links for detailed information and required forms:\n\n*   [Link to Scholarship Information Page]\n*   [Link to Application Form]\n\nWe encourage you to review these resources carefully.\n\nSincerely,\n\nAdmissions Office\n[University Name]",
+      "metadata": {
+        "conciseness": 0.662,
+        "tone": "Formal, Polite, Neutral",
+        "category": "Inquiry, Informational",
+        "negotiation_style": "Cooperative, Persuasive, Empathetic",
+        "top_phrases": [
+          "('merit based', np.int64(4))",
+          "('based scholarships', np.int64(4))",
+          "('merit based scholarships', np.int64(4))",
+          "('demonstrated leadership', np.int64(2))",
+          "('subject inquiry', np.int64(1))",
+          "('inquiry regarding', np.int64(1))",
+          "('regarding merit', np.int64(1))",
+          "('scholarships dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank merit', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "28",
+      "email": "Subject: Your Feedback Matters: Help Us Improve [App Name]!\n\nDear [User Name],\n\nWe hope you are enjoying your experience with [App Name]! We are incredibly grateful for your early support and for being among the first to use our newly launched mobile application.\n\nAs a startup, your feedback is invaluable to us. It helps us understand what's working well and identify areas where we can improve to better serve you and all our users.\n\nWe would be incredibly appreciative if you could take a few minutes to leave a review for [App Name] on the [App Store/Google Play Store]. Your honest thoughts will help us refine the app and ensure we are delivering the best possible experience.\n\nYou can leave a review by clicking on the following link: [Link to App Store/Google Play Store].\n\nThank you again for your support. We are committed to building a fantastic app, and your input is crucial to our success.\n\nSincerely,\n\n[Founder Name]\n\nFounder, [App Name]",
+      "response": "Subject: Re: Your Feedback Matters: Help Us Improve [App Name]!\n\nDear [Founder Name],\n\nThank you for your email. I am enjoying the [App Name] app and will be sure to leave a review soon.\n\nSincerely,\n\n[User Name]",
+      "metadata": {
+        "conciseness": 0.59,
+        "tone": "Formal, Polite, Friendly, Grateful",
+        "category": "Feedback, Request",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('subject feedback', np.int64(1))",
+          "('feedback matters', np.int64(1))",
+          "('matters help', np.int64(1))",
+          "('help improve', np.int64(1))",
+          "('improve app', np.int64(1))",
+          "('app dear', np.int64(1))",
+          "('dear founder', np.int64(1))",
+          "('founder thank', np.int64(1))",
+          "('thank email', np.int64(1))",
+          "('email enjoying', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "29",
+      "email": "Subject: Access Request - Secure Internal Dataset for Quarterly Report\n\nDear Data Team,\n\nThis email is to formally request access to the secure internal dataset required for the upcoming quarterly report. I will be utilizing this data to analyze [briefly state the purpose, e.g., sales performance, customer acquisition trends, etc.].\n\nCould you please advise on the necessary procedures for gaining access? Specifically, I would appreciate information regarding:\n\n*   Required forms or approvals.\n*   Data access protocols and security measures.\n*   Estimated timeframe for access to be granted.\n\nPlease let me know if any further information is needed from my end. I am available to discuss this further at your convenience.\n\nThank you for your assistance.\n\nSincerely,\n\n[Analyst's Name]\n[Analyst's Title]",
+      "response": "Subject: Re: Access Request - Secure Internal Dataset for Quarterly Report\n\nDear [Analyst's Name],\n\nThis email confirms the approval of your request for access to the secure internal dataset for the upcoming quarterly report.\n\nTo gain access, please follow these steps:\n\n*   Complete the Data Access Request Form, available at [Link to Form].\n*   Obtain approval from your direct supervisor.\n*   Submit the completed form to [Email Address or Submission Portal].\n\nData access protocols and security measures are as follows:\n\n*   Access will be granted via [Method of Access, e.g., a secure connection, specific software, etc.].\n*   All data must be handled in accordance with the Data Security Policy, which can be found at [Link to Policy].\n*   Please ensure all data is stored securely and is not shared with unauthorized personnel.\n\nThe estimated timeframe for access to be granted is typically within 2-3 business days of receiving the completed and approved form.\n\nIf you have any questions, please do not hesitate to contact us.\n\nSincerely,\n\n[Data Security Admin Name]\n[Data Security Admin Title]",
+      "metadata": {
+        "conciseness": 0.685,
+        "tone": "Formal, Polite, Neutral",
+        "category": "Request, Informational",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('data security', np.int64(3))",
+          "('access request', np.int64(2))",
+          "('secure internal', np.int64(2))",
+          "('internal dataset', np.int64(2))",
+          "('quarterly report', np.int64(2))",
+          "('access secure', np.int64(2))",
+          "('data access', np.int64(2))",
+          "('access granted', np.int64(2))",
+          "('security admin', np.int64(2))",
+          "('secure internal dataset', np.int64(2))"
+        ]
+      }
+    },
+    {
+      "id": "30",
+      "email": "Subject: Creative Collaboration Opportunity - [Your Name/Your Design Studio]\n\nDear [Photographer's Name],\n\nMy name is [Your Name], and I am a graphic designer at [Your Design Studio/Your Name]. I have been consistently impressed by your photography, particularly your work in [mention a specific area of their work that you admire, e.g., portraiture, landscape photography, etc.]. I am a great admirer of your style and the way you capture [mention a specific element you appreciate, e.g., light, emotion, composition].\n\nI am writing to you today to propose a potential creative collaboration. I believe our respective skill sets could complement each other beautifully, resulting in a unique and compelling project. I envision a project centered around [briefly describe your initial idea for the collaboration, e.g., creating a series of promotional materials, developing a visual narrative, etc.]. I am open to exploring various concepts and would be delighted to discuss your interests and ideas as well.\n\nI have attached my portfolio for your review, which showcases my design work and aesthetic. I am confident that our combined talents could produce something truly exceptional.\n\nWould you be open to a brief call sometime next week to discuss this further? Please let me know your availability.\n\nThank you for your time and consideration. I look forward to hearing from you.\n\nSincerely,\n\n[Your Name]\n\n[Your Title/Position]\n\n[Your Design Studio/Your Name]\n\n[Your Website/Portfolio Link]\n\n[Your Phone Number (Optional)]",
+      "response": "Subject: Re: Creative Collaboration Opportunity - [Your Name/Your Design Studio]\n\nDear [Your Name],\n\nThank you for your email and the kind words regarding my photography. I am very interested in exploring a potential collaboration with you.\n\nYour initial idea sounds intriguing, and I am certainly open to a brainstorming call next week to discuss this further. Please let me know what times work best for you. I am excited to see what we can create together.\n\nSincerely,\n\n[Photographer's Name]",
+      "metadata": {
+        "conciseness": 0.736,
+        "tone": "Formal, Polite, Friendly, Grateful, Encouraging",
+        "category": "Professional, Inquiry",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('subject creative', np.int64(1))",
+          "('creative collaboration', np.int64(1))",
+          "('collaboration opportunity', np.int64(1))",
+          "('opportunity design', np.int64(1))",
+          "('design studio', np.int64(1))",
+          "('studio dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank email', np.int64(1))",
+          "('email kind', np.int64(1))",
+          "('kind words', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "31",
+      "email": "Dear [Property Owner Name],\n\nI am writing to inquire about the availability of the apartment listed at [Address of Apartment]. I found the listing on [Platform where you saw the listing - e.g., your website, Zillow, etc.] and am very interested in learning more.\n\nCould you please provide information regarding the current availability of this unit? I would also appreciate details on the lease terms, including the monthly rent, security deposit requirements, and any associated fees.\n\nIf the apartment is currently available, I would be grateful for the opportunity to schedule a viewing at your earliest convenience. Please let me know what times and dates work best for you.\n\nThank you for your time and consideration. I look forward to hearing from you soon.\n\nSincerely,\n\n[Your Name]\n[Your Phone Number]\n[Your Email Address]",
+      "response": "Subject: Re: Inquiry Regarding Apartment at [Address of Apartment]\n\nDear [Your Name],\n\nThank you for your interest in the apartment at [Address of Apartment].\n\nThe monthly rent for the unit is [Monthly Rent Amount]. The security deposit required is [Security Deposit Amount], and there are no additional associated fees.\n\nThe lease term is [Lease Term - e.g., one year].\n\nThe apartment is currently available, with move-in dates available from [Start Date] onwards.\n\nPlease contact me to schedule a viewing.\n\nSincerely,\n\n[Property Owner Name]",
+      "metadata": {
+        "conciseness": 0.764,
+        "tone": "Formal, Polite, Neutral",
+        "category": "Inquiry, Informational",
+        "negotiation_style": "Cooperative, Assertive",
+        "top_phrases": [
+          "('apartment address', np.int64(2))",
+          "('address apartment', np.int64(2))",
+          "('monthly rent', np.int64(2))",
+          "('security deposit', np.int64(2))",
+          "('lease term', np.int64(2))",
+          "('apartment address apartment', np.int64(2))",
+          "('subject inquiry', np.int64(1))",
+          "('inquiry regarding', np.int64(1))",
+          "('regarding apartment', np.int64(1))",
+          "('apartment dear', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "32",
+      "email": "Dear [Restaurant Name],\n\nWe would like to request a table for six people on Saturday evening, [Date]. We are a group of friends and are looking forward to a pleasant dinner at your establishment.\n\nIf possible, we would prefer a table in [Preferred area of the restaurant, if any, e.g., a quieter area, near a window]. Please let us know what time slots are available.\n\nYou can reach me at [Your Phone Number] or reply to this email to confirm the booking.\n\nThank you for your time and we look forward to hearing from you soon.\n\nSincerely,\n\n[Your Name]",
+      "response": "Subject: Re: Table Reservation Request - Saturday, [Date]\n\nDear [Your Name],\n\nThank you for your email and your interest in dining at [Restaurant Name].\n\nWe are pleased to confirm your reservation for six people on Saturday, [Date]. We have availability at [Time Slot 1] and [Time Slot 2].\n\nWhile we cannot guarantee specific seating areas, we will do our best to accommodate your preference for [Preferred area of the restaurant, if any].\n\nWe look forward to welcoming you and your friends.\n\nSincerely,\n\n[Restaurant Name]",
+      "metadata": {
+        "conciseness": 0.684,
+        "tone": "Formal, Polite, Friendly",
+        "category": "Request, Transactional",
+        "negotiation_style": "Cooperative, Compromising",
+        "top_phrases": [
+          "('saturday date', np.int64(2))",
+          "('time slot', np.int64(2))",
+          "('subject table', np.int64(1))",
+          "('table reservation', np.int64(1))",
+          "('reservation request', np.int64(1))",
+          "('request saturday', np.int64(1))",
+          "('date dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank email', np.int64(1))",
+          "('email dining', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "33",
+      "email": "Subject: Inquiry Regarding a Custom Art Commission\n\nDear [Illustrator's Name],\n\nMy name is [Your Name], and I'm a big admirer of your work. I've been following your art for some time now, and I'm consistently impressed by [mention something specific you like about their art - e.g., your use of color, the detail in your character designs, etc.].\n\nI'm writing to inquire about the possibility of commissioning a custom piece from you. I have a specific idea in mind for [briefly describe the subject matter or concept - e.g., a portrait of my pet, an illustration for a personal project, etc.], and I believe your style would be a perfect fit.\n\nWould you be open to discussing this further? If so, I'd be happy to provide more details about the project, including the scope, desired size, and any specific references I have in mind.\n\nThank you for your time and consideration. I look forward to hearing from you at your convenience.\n\nSincerely,\n\n[Your Name]",
+      "response": "Subject: Re: Inquiry Regarding a Custom Art Commission\n\nDear [Your Name],\n\nThank you for your interest in my work and for reaching out! I appreciate you taking the time to contact me.\n\nI'd be happy to discuss your commission idea further. To give you an idea of my process, here's some general information:\n\n*   **Pricing:** My rates vary depending on the complexity and scope of the project. Generally, a piece like the one you described would likely fall within the range of \\[Price Range - e.g., $X00 - $Y00], but this is subject to change based on the final details.\n*   **Timeline:** The completion time for a commission typically ranges from \\[Timeframe - e.g., 2-4 weeks], depending on the workload and revisions.\n*   **Payment:** I require \\[Payment Structure - e.g., a 50% deposit upfront, with the remaining balance due upon completion and approval of the final artwork]. Payment can be made via \\[Payment Methods - e.g., PayPal or bank transfer].\n\nPlease feel free to share more details about your project when you're ready. I'm eager to hear more and see if we can bring your vision to life.\n\nBest regards,\n\n[Illustrator's Name]",
+      "metadata": {
+        "conciseness": 0.793,
+        "tone": "Formal, Polite, Friendly, Grateful, Encouraging",
+        "category": "Inquiry, Informational",
+        "negotiation_style": "Cooperative, Persuasive, Empathetic",
+        "top_phrases": [
+          "('subject inquiry', np.int64(1))",
+          "('inquiry regarding', np.int64(1))",
+          "('regarding custom', np.int64(1))",
+          "('custom art', np.int64(1))",
+          "('art commission', np.int64(1))",
+          "('commission dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank work', np.int64(1))",
+          "('work reaching', np.int64(1))",
+          "('reaching appreciate', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "34",
+      "email": "Subject: Podcast Guest Invitation - [Podcast Name]!\n\nHey [Expert's Name],\n\nHope you're having a great week!\n\nMy name is [Your Name], and I host the podcast, [Podcast Name]. We're big fans of your work at [Expert's Company/Area of Expertise] \u2013 seriously, the team and I were just discussing [mention a specific project/article/talk they did] the other day!\n\nWe're putting together an episode on [Podcast Episode Topic] and immediately thought of you. Your insights on [Specific area of expertise] would be absolutely invaluable to our listeners.\n\nThe episode would involve a casual chat, probably around [estimated time length], where we'd discuss [briefly mention potential discussion points]. We're flexible and happy to tailor the conversation to your interests and expertise.\n\nWould you be open to joining us? We're aiming to record sometime in the next [timeframe, e.g., couple of weeks]. Let me know if you're interested, and we can work out the details!\n\nThanks so much for your time and consideration.\n\nBest,\n\n[Your Name]\n[Podcast Name]\n[Podcast Website/Link (Optional)]",
+      "response": "Subject: Re: Podcast Guest Invitation - [Podcast Name]!\n\nHey [Your Name],\n\nThanks so much for reaching out! I'd love to be a guest on [Podcast Name].\n\nThe episode topic sounds really interesting, and I'm happy to chat about [Specific area of expertise].\n\nI'm generally available on [list a few dates/times or a timeframe]. Let me know what works best for you.\n\nLooking forward to it!\n\nBest,\n\n[Expert's Name]",
+      "metadata": {
+        "conciseness": 0.766,
+        "tone": "Polite, Friendly, Grateful",
+        "category": "Promotional, Request",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('subject podcast', np.int64(1))",
+          "('podcast guest', np.int64(1))",
+          "('guest invitation', np.int64(1))",
+          "('invitation podcast', np.int64(1))",
+          "('podcast hey', np.int64(1))",
+          "('hey thanks', np.int64(1))",
+          "('thanks reaching', np.int64(1))",
+          "('reaching love', np.int64(1))",
+          "('love guest', np.int64(1))",
+          "('guest podcast', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "35",
+      "email": "Dear [Teacher's Name/School Administration],\n\nPlease accept this email as notification that my child, [Child's Name], in grade [Grade Level], will be absent from school today, [Date], due to a family emergency.\n\nWe sincerely apologize for any inconvenience this may cause and appreciate your understanding in this matter. We will ensure that [Child's Name] catches up on any missed coursework upon their return.\n\nWe anticipate [Child's Name] will be back in school on [Date of Return], but will keep you informed of any changes.\n\nThank you for your attention to this matter.\n\nSincerely,\n\n[Your Name]\n[Your Phone Number (Optional)]",
+      "response": "Subject: Re: Absence Notification - [Child's Name]\n\nDear [Your Name],\n\nThis email acknowledges receipt of your notification regarding [Child's Name]'s absence from school today, [Date].\n\nWe understand and offer our support during this difficult time. Please do not hesitate to contact us if there is anything we can do to assist.\n\nWe look forward to [Child's Name]'s return on [Date of Return].\n\nSincerely,\n\n[School Administration/Teacher's Name]",
+      "metadata": {
+        "conciseness": 0.753,
+        "tone": "Formal, Polite, Friendly, Neutral, Encouraging",
+        "category": "Informational, Acknowledgment",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('subject absence', np.int64(1))",
+          "('absence notification', np.int64(1))",
+          "('notification child', np.int64(1))",
+          "('child dear', np.int64(1))",
+          "('dear email', np.int64(1))",
+          "('email acknowledges', np.int64(1))",
+          "('acknowledges receipt', np.int64(1))",
+          "('receipt notification', np.int64(1))",
+          "('notification regarding', np.int64(1))",
+          "('regarding child', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "36",
+      "email": "Subject: Project [Project Name] - Anonymous Feedback Request\n\nDear Team,\n\nNow that the [Project Name] project has concluded, we are seeking your valuable feedback to help us improve our processes and performance in future endeavors.\n\nWe would appreciate it if you could take a few moments to share your anonymous feedback regarding your experiences on this project. Your insights are crucial to identifying areas of strength and areas where we can enhance our approach.\n\nPlease submit your feedback via [Link to Feedback Form/Platform]. This platform ensures complete anonymity, allowing you to provide candid and honest assessments.\n\nThe deadline for submitting your feedback is [Date].\n\nThank you for your time and contributions. We look forward to reviewing your feedback and implementing improvements based on your insights.\n\nSincerely,\n\n[Team Leader Name]",
+      "response": "Subject: Re: Project [Project Name] - Anonymous Feedback Request\n\nDear [Team Leader Name],\n\nThank you for the opportunity to provide feedback on the [Project Name] project. I appreciate your commitment to continuous improvement and the openness to receive anonymous input.\n\nI have submitted my feedback via the provided link. I hope my insights will be helpful in refining future project processes.\n\nSincerely,\n\n[Your Name]",
+      "metadata": {
+        "conciseness": 0.709,
+        "tone": "Formal, Polite, Grateful",
+        "category": "Request, Feedback, Informational",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('project project', np.int64(2))",
+          "('subject project', np.int64(1))",
+          "('project anonymous', np.int64(1))",
+          "('anonymous feedback', np.int64(1))",
+          "('feedback request', np.int64(1))",
+          "('request dear', np.int64(1))",
+          "('dear team', np.int64(1))",
+          "('team leader', np.int64(1))",
+          "('leader thank', np.int64(1))",
+          "('thank opportunity', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "37",
+      "email": "Dear [Juice Company Name] Sales Department,\n\nMy name is [Your Name] and I am the owner of [Your Business Name], a small business located in [Your City, State]. We are interested in potentially carrying your organic juice bottles in our store.\n\nWe are particularly interested in learning more about your bulk pricing options. Could you please provide information regarding pricing tiers for larger orders of your various juice flavors? We would also appreciate details on minimum order quantities and any available discounts for first-time customers.\n\nIf possible, could you also share information regarding your current lead times for bulk orders?\n\nThank you for your time and consideration. We look forward to hearing from you soon.\n\nSincerely,\n\n[Your Name]\n[Your Business Name]\n[Your Phone Number]\n[Your Email Address]",
+      "response": "Subject: Re: Inquiry Regarding Bulk Order Pricing - [Your Business Name]\n\nDear [Your Name],\n\nThank you for your interest in [Juice Company Name] and our organic juice products.\n\nWe have attached a pricing sheet outlining our bulk pricing options and various flavor offerings. This document includes information on pricing tiers, minimum order quantities, and first-time customer discounts.\n\nAdditionally, please find attached our standard shipping terms.\n\nWe are happy to answer any further questions you may have.\n\nSincerely,\n\n[Juice Company Name] Sales Department",
+      "metadata": {
+        "conciseness": 0.662,
+        "tone": "Formal, Polite, Grateful, Neutral",
+        "category": "Inquiry, Informational",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('juice company', np.int64(2))",
+          "('subject inquiry', np.int64(1))",
+          "('inquiry regarding', np.int64(1))",
+          "('regarding bulk', np.int64(1))",
+          "('bulk order', np.int64(1))",
+          "('order pricing', np.int64(1))",
+          "('pricing business', np.int64(1))",
+          "('business dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank juice', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "38",
+      "email": "Subject: Travel Reimbursement Request - [Your Name]\n\nDear HR Department,\n\nPlease find attached receipts for travel expenses incurred during [Date Range] related to [Purpose of Travel - e.g., conference attendance, client meetings].\n\nI have compiled all relevant documentation and supporting materials for your review. Kindly process the reimbursement at your earliest convenience.\n\nPlease let me know if you require any further information or clarification.\n\nThank you for your time and assistance.\n\nSincerely,\n\n[Your Name]\n[Your Employee ID Number]",
+      "response": "Subject: Re: Travel Reimbursement Request - [Your Name]\n\nDear [Your Name],\n\nThis email acknowledges receipt of your travel reimbursement request.\n\nWe will process your request and aim to complete the reimbursement within [Number] business days. You will be notified upon completion.\n\nSincerely,\n\nHR Department",
+      "metadata": {
+        "conciseness": 0.661,
+        "tone": "Formal, Polite, Neutral",
+        "category": "Transactional, Informational",
+        "negotiation_style": "Cooperative, Assertive",
+        "top_phrases": [
+          "('travel reimbursement', np.int64(2))",
+          "('reimbursement request', np.int64(2))",
+          "('travel reimbursement request', np.int64(2))",
+          "('subject travel', np.int64(1))",
+          "('request dear', np.int64(1))",
+          "('dear email', np.int64(1))",
+          "('email acknowledges', np.int64(1))",
+          "('acknowledges receipt', np.int64(1))",
+          "('receipt travel', np.int64(1))",
+          "('request process', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "39",
+      "email": "Subject: Re: Dog-sitting this weekend?\n\nHi [Neighbor's Name],\n\nThanks for reaching out! I got your message about watching [Dog's Name] this weekend.\n\nUnfortunately, I already have plans that will take me out of town. I won't be able to help out this time.\n\nI hope you find someone to look after [Dog's Name].\n\nBest,\n\n[Your Name]",
+      "response": "Subject: Re: Re: Dog-sitting this weekend?\n\nHi [Neighbor's Name],\n\nThanks for getting back to me!\n\nI'd love to help out with dog-sitting [Dog's Name] this weekend.\n\nCould you tell me a bit about [Dog's Name]'s usual routine?\n\nBest,\n\n[Your Name]",
+      "metadata": {
+        "conciseness": 0.629,
+        "tone": "Polite, Friendly, Grateful",
+        "category": "Inquiry, Request",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('dog sitting', np.int64(2))",
+          "('subject dog', np.int64(1))",
+          "('sitting weekend', np.int64(1))",
+          "('weekend hi', np.int64(1))",
+          "('hi neighbor', np.int64(1))",
+          "('neighbor thanks', np.int64(1))",
+          "('thanks getting', np.int64(1))",
+          "('getting love', np.int64(1))",
+          "('love help', np.int64(1))",
+          "('help dog', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "40",
+      "email": "Subject: Reschedule Request - [Client Name] - Therapy Appointment\n\nDear [Therapist Name],\n\nPlease accept this email as notification that I need to reschedule my therapy appointment scheduled for [Date] at [Time]. Due to an unforeseen and unavoidable work conflict that has arisen, I will be unable to attend at the originally scheduled time.\n\nI sincerely apologize for any inconvenience this may cause. I understand the importance of maintaining our scheduled appointments and I regret having to request this change at such short notice.\n\nWould it be possible to reschedule our session sometime within the next week? Please let me know what times are available. I am flexible and will do my best to accommodate your schedule.\n\nThank you for your understanding and flexibility. I look forward to hearing from you soon.\n\nSincerely,\n\n[Client Name]",
+      "response": "Subject: Re: Reschedule Request - [Client Name] - Therapy Appointment\n\nDear [Client Name],\n\nThank you for your email. I understand and am happy to accommodate your request to reschedule your appointment.\n\nPlease find the following alternative time slots available within the next week:\n\n*   [Date] at [Time]\n*   [Date] at [Time]\n*   [Date] at [Time]\n\nPlease let me know which of these times works best for you. I look forward to our session.\n\nSincerely,\n\n[Therapist Name]",
+      "metadata": {
+        "conciseness": 0.689,
+        "tone": "Formal, Polite, Friendly, Grateful, Encouraging",
+        "category": "Request, Apology, Response",
+        "negotiation_style": "Cooperative, Accommodating",
+        "top_phrases": [
+          "('date time', np.int64(3))",
+          "('time date', np.int64(2))",
+          "('date time date', np.int64(2))",
+          "('time date time', np.int64(2))",
+          "('subject reschedule', np.int64(1))",
+          "('reschedule request', np.int64(1))",
+          "('request client', np.int64(1))",
+          "('client therapy', np.int64(1))",
+          "('therapy appointment', np.int64(1))",
+          "('appointment dear', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "41",
+      "email": "Hey [Streamer's Name]!\n\nWhaddup, my dude?!\n\nListen, I was thinking... wanna smash some games this weekend?! I was thinking we could collab and stream together! It'd be a blast!\n\nWe could play [Game 1] or maybe even [Game 2] if you're feeling it. Or, you know, whatever you're vibing with! Just wanna have some fun and hang out with the chat.\n\nLet me know if you're in! We can figure out a time that works for both of us. Super hyped if you're down!\n\nLater!\n[Your Name]",
+      "response": "Subject: Re: Collab Stream This Weekend?!\n\nAyyy, [Your Name]!\n\nDude, YES! I'm so down for a collab stream this weekend! That sounds like a total blast.\n\nLet's do it! I'm thinking we should totally wreck some stuff in [Co-op Game Suggestion]! Whatcha think?\n\nHit me up with some times that work for you! Stoked!",
+      "metadata": {
+        "conciseness": 0.785,
+        "tone": "Friendly, Enthusiastic",
+        "category": "Inquiry, Request",
+        "negotiation_style": "Cooperative, Persuasive, Empathetic",
+        "top_phrases": [
+          "('collab stream', np.int64(2))",
+          "('stream weekend', np.int64(2))",
+          "('collab stream weekend', np.int64(2))",
+          "('subject collab', np.int64(1))",
+          "('weekend ayyy', np.int64(1))",
+          "('ayyy dude', np.int64(1))",
+          "('dude yes', np.int64(1))",
+          "('yes collab', np.int64(1))",
+          "('weekend sounds', np.int64(1))",
+          "('sounds like', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "42",
+      "email": "Subject: Refund Request - [Concert Name] - Order # [Order Number]\n\nHey there,\n\nHope you're doing well.\n\nJust wanted to follow up on the cancellation of the [Concert Name] concert. I had tickets (Order # [Order Number]) and, well, I'm a little bummed it got canceled!\n\nCould you please let me know how I can go about getting a refund? Any info on the process would be super helpful.\n\nThanks so much for your time and help!\n\nBest,\n\n[Your Name]",
+      "response": "Subject: Re: Refund Request - [Concert Name] - Order # [Order Number]\n\nHey [Your Name],\n\nSo sorry about the cancellation of the [Concert Name] concert! We're really bummed too.\n\nNo worries, your refund for order #[Order Number] has been processed. You should see the money back in your account within [Number] business days.\n\nThanks for your patience and understanding!\n\nBest,\n\n[Ticketing Platform Name]",
+      "metadata": {
+        "conciseness": 0.801,
+        "tone": "Friendly, Apologetic, Polite",
+        "category": "Transactional, Apology, Informational",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('order order', np.int64(2))",
+          "('order number', np.int64(2))",
+          "('order order number', np.int64(2))",
+          "('subject refund', np.int64(1))",
+          "('refund request', np.int64(1))",
+          "('request concert', np.int64(1))",
+          "('concert order', np.int64(1))",
+          "('number hey', np.int64(1))",
+          "('hey sorry', np.int64(1))",
+          "('sorry cancellation', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "43",
+      "email": "Hey [Friend's Name],\n\nOMG, I just got your gift and I'm seriously tearing up! You are the absolute BEST. Seriously, [mention the gift] is SO perfect! I can't believe you remembered [specific detail about why you love the gift or why it's meaningful].\n\nYou totally made my birthday! Thank you, thank you, THANK YOU! I feel so loved and lucky to have you as a friend. Let's [suggest doing something together soon, e.g., \"celebrate properly soon and grab some drinks!\"].\n\nLove ya tons!\n\nTalk soon,\n[Your Name]",
+      "response": "Subject: Re: You are the BEST! \n\nHey [Your Name]!\n\nOMG, you're so welcome!! I'm SO glad you loved it! Your reaction made my day, seriously. \n\nAnd YES, let's definitely [agree to the suggestion, or suggest something else, e.g., \"grab those drinks ASAP!\"].\n\nLove ya too! Talk soon!",
+      "metadata": {
+        "conciseness": 0.784,
+        "tone": "Polite, Friendly, Grateful, Encouraging",
+        "category": "Feedback",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('subject best', np.int64(1))",
+          "('best hey', np.int64(1))",
+          "('hey omg', np.int64(1))",
+          "('omg welcome', np.int64(1))",
+          "('welcome glad', np.int64(1))",
+          "('glad loved', np.int64(1))",
+          "('loved reaction', np.int64(1))",
+          "('reaction day', np.int64(1))",
+          "('day seriously', np.int64(1))",
+          "('seriously yes', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "44",
+      "email": "Subject: Cleaning Service Quote Request - [Your Address]\n\nDear [Cleaning Service Name],\n\nMy name is [Your Name] and I am a new tenant at [Your Address]. I am writing to request a quote for your monthly cleaning services.\n\nI am interested in a recurring cleaning package, ideally on a monthly basis. Could you please provide me with information regarding the different packages you offer, including the services provided in each, and their respective costs?\n\nIf possible, please also let me know your availability for scheduling and any specific requirements I should be aware of.\n\nThank you for your time and consideration. I look forward to hearing from you soon.\n\nSincerely,\n\n[Your Name]\n[Your Phone Number]\n[Your Email Address]",
+      "response": "Subject: Re: Cleaning Service Quote Request - [Your Address]\n\nDear [Your Name],\n\nThank you for your interest in [Cleaning Service Name]. We appreciate you reaching out.\n\nWe offer several monthly cleaning packages. Here's a brief overview:\n\n*   **Basic:** Includes dusting, vacuuming, mopping, bathroom cleaning (toilet, sink, shower/tub), and kitchen cleaning (countertops, sink, microwave). Price: $[Price]\n*   **Standard:** Includes all Basic services, plus cleaning of appliances (oven, refrigerator - inside and out), and window cleaning. Price: $[Price]\n*   **Premium:** Includes all Standard services, plus deep cleaning of bathrooms and kitchen, and baseboard cleaning. Price: $[Price]\n\nWe also offer the following add-ons:\n\n*   Laundry Service: $[Price] per load\n*   Window Cleaning (Exterior): $[Price] per window\n*   Carpet Cleaning: $[Price] per room\n\nOur availability for scheduling is generally flexible. We can typically accommodate monthly cleanings on [Days of the week] and [Days of the week]. We recommend booking at least [Number] weeks in advance to secure your preferred date.\n\nFor your address, we would need to know if there are any specific access instructions or requirements.\n\nPlease let us know which package you are interested in, and if you would like to add any extras. We can then confirm availability and finalize a schedule.\n\nWe look forward to hearing from you.\n\nSincerely,\n\n[Cleaning Service Name]",
+      "metadata": {
+        "conciseness": 0.772,
+        "tone": "Formal, Polite, Grateful, Neutral",
+        "category": "Inquiry, Informational",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('cleaning service', np.int64(3))",
+          "('price price', np.int64(3))",
+          "('cleaning price', np.int64(3))",
+          "('services plus', np.int64(2))",
+          "('window cleaning', np.int64(2))",
+          "('days week', np.int64(2))",
+          "('cleaning price price', np.int64(2))",
+          "('subject cleaning', np.int64(1))",
+          "('service quote', np.int64(1))",
+          "('quote request', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "45",
+      "email": "Subject: Overdue Library Book - [Book Title]\n\nDear [Student Name],\n\nThis email serves as a reminder that the book, \"[Book Title],\" which you borrowed from the library, is now overdue. The due date was [Due Date].\n\nWe kindly request that you return the book to the library as soon as possible to avoid further late fees. You may return the book to any of our library locations during operating hours.\n\nPlease be advised that overdue fines are [Fine Amount] per day.\n\nIf you have already returned the book, please disregard this email. If you have any questions, please do not hesitate to contact the library at [Phone Number] or reply to this email.\n\nSincerely,\n\n[Librarian Name]\n[Library Name]",
+      "response": "Subject: Re: Overdue Library Book - [Book Title]\n\nDear [Librarian Name],\n\nThank you for the reminder. I sincerely apologize for the oversight. I will return \"[Book Title]\" to the library tomorrow.\n\nSincerely,\n\n[Student Name]",
+      "metadata": {
+        "conciseness": 0.664,
+        "tone": "Polite, Apologetic, Grateful",
+        "category": "Informational, Apology",
+        "negotiation_style": "Cooperative, Compromising",
+        "top_phrases": [
+          "('book title', np.int64(2))",
+          "('subject overdue', np.int64(1))",
+          "('overdue library', np.int64(1))",
+          "('library book', np.int64(1))",
+          "('book book', np.int64(1))",
+          "('title dear', np.int64(1))",
+          "('dear librarian', np.int64(1))",
+          "('librarian thank', np.int64(1))",
+          "('thank reminder', np.int64(1))",
+          "('reminder sincerely', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "46",
+      "email": "Hey Team,\n\nJust wanted to give you a quick rundown of my experience with the new mobile game during the beta. Overall, I'm really enjoying it! The core gameplay is super fun.\n\nHowever, I did run into a few things:\n\n*   **Bug:** Sometimes the character gets stuck on the environment. It's usually after a jump or a quick movement.\n*   **UI Issue:** The text in the tutorial is a bit small and hard to read on my phone.\n*   **Bug:** The sound effects sometimes cut out randomly.\n\nI'm happy to provide more details if needed. Keep up the great work!\n\nBest,\n\n[Beta Tester Name]",
+      "response": "Subject: Re: Beta Feedback - [Mobile Game Name]\n\nHey [Beta Tester Name],\n\nThanks so much for the feedback! We really appreciate you taking the time to share your experience.\n\nWe're aware of the issues you mentioned, and they're on our list to be patched in the next update.\n\nLet us know if you run into anything else!\n\nCheers,\n\nThe Dev Team",
+      "metadata": {
+        "conciseness": 0.805,
+        "tone": "Polite, Friendly, Grateful",
+        "category": "Feedback, Informational",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('subject beta', np.int64(1))",
+          "('beta feedback', np.int64(1))",
+          "('feedback mobile', np.int64(1))",
+          "('mobile game', np.int64(1))",
+          "('game hey', np.int64(1))",
+          "('hey beta', np.int64(1))",
+          "('beta tester', np.int64(1))",
+          "('tester thanks', np.int64(1))",
+          "('thanks feedback', np.int64(1))",
+          "('feedback really', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "47",
+      "email": "Hey Grandma!\n\nHope you're doing awesome!\n\nListen, I've got a HUGE craving for your lasagna. Seriously, the best lasagna EVER. And I was thinking... maybe, just maybe, you could share your secret recipe with me? \n\nI've tried making it before, but it just never tastes quite as magical as yours. Is there some secret ingredient? A special technique? Spill the beans, Grandma!\n\nNo pressure, of course, but if you're willing to share, I'd be eternally grateful (and I promise to make you a lasagna someday!).\n\nLove you tons!\n\n[Your Name]",
+      "response": "Subject: Re: Lasagna Craving! \n\nHoney,\n\nOf course, sweetie! Here's the recipe, just like you asked. It's been in the family forever, so don't mess it up! \n\n**Grandma's Famous Lasagna**\n\n**Meat Sauce:**\n\n*   1 lb ground beef\n*   1 lb Italian sausage (sweet or hot, your choice!)\n*   1 onion, chopped\n*   2 cloves garlic, minced\n*   2 (28 ounce) cans crushed tomatoes\n*   1 (15 ounce) can tomato sauce\n*   1 (15 ounce) can tomato paste\n*   1 tsp dried oregano\n*   1 tsp dried basil\n*   1/2 tsp salt\n*   1/4 tsp black pepper\n*   A pinch of sugar (secret ingredient!)\n\nBrown the meat and sausage, drain off the grease. Add onion and garlic, cook until softened. Stir in the tomatoes, sauce, paste, and seasonings. Simmer for at least an hour (the longer, the better!). Add the pinch of sugar.\n\n**Cheese Mixture:**\n\n*   15 ounces ricotta cheese\n*   1 egg, beaten\n*   1/2 cup grated Parmesan cheese\n*   1/2 tsp salt\n*   A dash of pepper\n\nMix all ingredients in a bowl.\n\n**Assembly:**\n\n*   9 lasagna noodles, cooked according to package directions\n*   2 cups shredded mozzarella cheese\n\nPreheat oven to 375F (190C).\n\nSpread a thin layer of meat sauce in the bottom of a 9x13 inch baking dish. Layer with 3 noodles, half the ricotta mixture, 1/3 of the mozzarella, and some meat sauce. Repeat layers. Top with remaining noodles, meat sauce, and mozzarella.\n\nBake for 30-40 minutes, or until bubbly and cheese is melted and lightly browned. Let it rest for 10 minutes before cutting and serving.\n\nAnd the secret ingredient? A little bit of love, of course! \n\nCan't wait for my lasagna someday! Love you more!\n\nLove,\nGrandma",
+      "metadata": {
+        "conciseness": 0.756,
+        "tone": "Friendly, Polite, Grateful, Encouraging",
+        "category": "Request, Informational",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('meat sauce', np.int64(4))",
+          "('15 ounce', np.int64(2))",
+          "('ounce tomato', np.int64(2))",
+          "('tsp dried', np.int64(2))",
+          "('tsp salt', np.int64(2))",
+          "('pinch sugar', np.int64(2))",
+          "('secret ingredient', np.int64(2))",
+          "('15 ounce tomato', np.int64(2))",
+          "('subject lasagna', np.int64(1))",
+          "('lasagna craving', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "48",
+      "email": "Subject: Collaboration Opportunity: [Your YouTube Channel Name] & [Brand Name] Power Tool Review\n\nDear [YouTuber's Name],\n\nMy name is [Your Name] and I'm reaching out from [Brand Name], a home improvement brand specializing in [briefly describe your brand and products]. We're big fans of your YouTube channel, [Your YouTube Channel Name], and particularly appreciate your insightful reviews and demonstrations of power tools and DIY projects.\n\nWe're excited to introduce our latest product, the [Name of Power Tool], a [brief description of the tool and its key features]. We believe it would be a great fit for your audience and would love to offer you the opportunity to review it on your channel.\n\nWe're confident that the [Name of Power Tool] offers a unique combination of [mention 2-3 key benefits, e.g., power, ease of use, innovative features] that your viewers would find valuable. We're happy to provide you with a complimentary unit for review, along with any supporting materials you might need, such as specifications, high-resolution images, and marketing information.\n\nWe're open to discussing the specifics of the review, including any preferred formats or content ideas you may have. We're also happy to answer any questions you might have about the tool or our brand.\n\nWould you be interested in learning more about this potential collaboration? Please let me know if you'd like to schedule a brief call to discuss this further.\n\nThank you for your time and consideration. We look forward to hearing from you.\n\nSincerely,\n\n[Your Name]\n\n[Your Title]\n\n[Brand Name]\n\n[Website]",
+      "response": "Subject: Re: Collaboration Opportunity: [Your YouTube Channel Name] & [Brand Name] Power Tool Review\n\nDear [Your Name],\n\nThank you for reaching out and for your interest in collaborating. I've reviewed your email and am interested in learning more about the opportunity to review the [Name of Power Tool] on my channel.\n\nCould you please provide more details regarding the sponsorship, such as the scope of the review, any expectations regarding content, and the compensation offered?\n\nI look forward to hearing from you.\n\nSincerely,\n\n[Your YouTube Channel Name]",
+      "metadata": {
+        "conciseness": 0.69,
+        "tone": "Formal, Polite, Neutral",
+        "category": "Promotional, Inquiry, Request",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('youtube channel', np.int64(2))",
+          "('power tool', np.int64(2))",
+          "('subject collaboration', np.int64(1))",
+          "('collaboration opportunity', np.int64(1))",
+          "('opportunity youtube', np.int64(1))",
+          "('channel brand', np.int64(1))",
+          "('brand power', np.int64(1))",
+          "('tool review', np.int64(1))",
+          "('review dear', np.int64(1))",
+          "('dear thank', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "49",
+      "email": "Hey [Service Name] Team,\n\nSo, uh, listen. I love your service, seriously. But my inbox is starting to look like a promotional flyer graveyard, and it's all thanks to you guys! \n\nSeriously, I'm getting a LOT of emails. Like, a *lot* a lot. Could you maybe, possibly, dial it back a bit? My poor inbox is begging for mercy.\n\nNo hard feelings, just a friendly heads-up!\n\nThanks,\n[User Name]",
+      "response": "Subject: Oops! Sorry about the email overload!\n\nHey [User Name],\n\nOMG, so sorry about the email flood! We definitely didn't mean to bury you in messages.\n\nConsider it done, you're officially unsubscribed. Hopefully, your inbox can breathe a little easier now!\n\nThanks for the heads-up (and for still liking our service!).",
+      "metadata": {
+        "conciseness": 0.747,
+        "tone": "Polite,Friendly,Apologetic",
+        "category": "Complaint, Apology, Request",
+        "negotiation_style": "Cooperative, Empathetic, Compromising",
+        "top_phrases": [
+          "('sorry email', np.int64(2))",
+          "('subject oops', np.int64(1))",
+          "('oops sorry', np.int64(1))",
+          "('email overload', np.int64(1))",
+          "('overload hey', np.int64(1))",
+          "('hey user', np.int64(1))",
+          "('user omg', np.int64(1))",
+          "('omg sorry', np.int64(1))",
+          "('email flood', np.int64(1))",
+          "('flood definitely', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "50",
+      "email": "Subject: Course Recommendations - [Your Name]\n\nDear [Senior's Name],\n\nI hope this email finds you well.\n\nMy name is [Your Name], and I'm a [Your Year] in [Your Major]. I'm currently planning my courses for next semester, and I was hoping you might be able to offer some advice.\n\nI've heard you've taken a few courses that I'm considering, specifically [Course 1] and [Course 2]. If you have a moment, I'd be very grateful to hear your thoughts on them \u2013 things like the workload, the professor, and whether you found them particularly interesting or helpful.\n\nAlso, if you have any other course recommendations within [Your Major/Area of Interest] that you enjoyed, I'd be happy to hear about those as well. Any insights you could provide would be greatly appreciated.\n\nThank you for your time and consideration.\n\nSincerely,\n\n[Your Name]\n[Your Student ID Number (Optional)]",
+      "response": "Subject: Re: Course Recommendations - [Your Name]\n\nDear [Your Name],\n\nThank you for your email.\n\nI'd be happy to share my thoughts on the courses you mentioned.\n\nRegarding [Course 1], I found the workload manageable, and [Professor's Name] was a great instructor. I thought the material was quite interesting. As for [Course 2], it was also a good experience. The professor, [Professor's Name], was engaging, and the course provided a solid foundation in [brief course topic].\n\nI would also recommend considering [Course 3] and [Course 4]. [Course 3] was particularly helpful for [brief reason], and [Course 4] offered a different perspective on [brief course topic].\n\nI hope this information is helpful as you plan your courses. Best of luck with your selections.\n\nSincerely,\n\n[Senior's Name]",
+      "metadata": {
+        "conciseness": 0.629,
+        "tone": "Formal, Polite, Friendly, Helpful",
+        "category": "Inquiry, Informational",
+        "negotiation_style": "Cooperative, Persuasive, Empathetic",
+        "top_phrases": [
+          "('brief course', np.int64(2))",
+          "('course topic', np.int64(2))",
+          "('course course', np.int64(2))",
+          "('brief course topic', np.int64(2))",
+          "('subject course', np.int64(1))",
+          "('course recommendations', np.int64(1))",
+          "('recommendations dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank email', np.int64(1))",
+          "('email happy', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "51",
+      "email": "Subject: Wrong Item Received - Order # [Order Number]\n\nHey there,\n\nJust wanted to let you know that I received the wrong item in my recent order, # [Order Number]. I was expecting [Item they ordered] but instead got [Item they received].\n\nCould you please help me sort this out? I'd really appreciate it if you could let me know how we can get the correct item to me.\n\nThanks so much for your help!\n\nBest,\n\n[Customer Name]",
+      "response": "Subject: Re: Wrong Item Received - Order # [Order Number]\n\nHi [Customer Name],\n\nSo sorry to hear you received the wrong item! That's definitely not what we want.\n\nWe'd be happy to help sort this out for you. We can send you a return label for the incorrect item and get the [Item they ordered] shipped out to you right away.\n\nJust let us know if that works for you!\n\nThanks for your patience,\n\n[Your Name/Support Team]",
+      "metadata": {
+        "conciseness": 0.763,
+        "tone": "Polite, Friendly, Apologetic, Encouraging",
+        "category": "Complaint, Request, Apology, Transactional",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('wrong item', np.int64(2))",
+          "('subject wrong', np.int64(1))",
+          "('item received', np.int64(1))",
+          "('received order', np.int64(1))",
+          "('order order', np.int64(1))",
+          "('order number', np.int64(1))",
+          "('number hi', np.int64(1))",
+          "('hi customer', np.int64(1))",
+          "('customer sorry', np.int64(1))",
+          "('sorry hear', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "52",
+      "email": "Dear [Name],\n\nMy name is [Your Name], and I'm a [Your Profession] at [Your Company]. I've been following your work in [Field of Expertise] for some time now, and I'm consistently impressed by [Specific accomplishment or quality you admire].\n\nI'm writing to you today because I'm at a point in my career where I'm looking to further develop my skills and gain a deeper understanding of [Specific area of interest]. I've been particularly inspired by your approach to [Specific aspect of their work] and believe your insights would be invaluable.\n\nI understand you're incredibly busy, but I was hoping you might consider mentoring me. I'm flexible and happy to work around your schedule. Even a brief monthly check-in, whether in person or virtually, would be greatly appreciated.\n\nOf course, I completely understand if your schedule doesn't allow for this. Regardless, thank you for your time and for the contributions you've made to the field.\n\nSincerely,\n\n[Your Name]",
+      "response": "Subject: Re: Inquiry Regarding Mentorship\n\nDear [Your Name],\n\nThank you for your email and kind words. I appreciate you reaching out.\n\nI'd be happy to schedule a brief introductory call to discuss your interests and how I might be able to help. Please let me know what times work best for you.\n\nBest regards,\n\n[Mentor's Name]",
+      "metadata": {
+        "conciseness": 0.725,
+        "tone": "Formal, Polite, Friendly, Grateful, Encouraging",
+        "category": "Request, Professional, Inquiry",
+        "negotiation_style": "Cooperative, Persuasive",
+        "top_phrases": [
+          "('subject inquiry', np.int64(1))",
+          "('inquiry regarding', np.int64(1))",
+          "('regarding mentorship', np.int64(1))",
+          "('mentorship dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank email', np.int64(1))",
+          "('email kind', np.int64(1))",
+          "('kind words', np.int64(1))",
+          "('words appreciate', np.int64(1))",
+          "('appreciate reaching', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "53",
+      "email": "Subject: Just finished [Book Title] - Wow.\n\nDear Mr./Ms. [Author's Last Name],\n\nI'm writing to you because I just finished reading your latest book, \"[Book Title],\" and I felt compelled to reach out. I know you probably get a lot of emails, but I just wanted to say how much it resonated with me.\n\nHonestly, I was completely captivated from the very beginning. [Mention a specific detail you enjoyed, e.g., \"The way you described the setting of X was just breathtaking.\"] I found myself completely lost in the story, and I honestly didn't want it to end.\n\n[Mention a specific character or theme that impacted you, e.g., \"The character of Y really struck a chord with me, and I found myself thinking about their journey long after I put the book down.\"] It's a story that will definitely stay with me for a while.\n\nThank you for writing it. It truly meant a lot.\n\nSincerely,\n\n[Your Name]",
+      "response": "Subject: Re: Just finished [Book Title] - Wow.\n\nDear [Your Name],\n\nThank you so much for taking the time to write. I truly appreciate your kind words about \"[Book Title]\". It means a great deal to hear that the book resonated with you.\n\nYour message certainly made my day.\n\nSincerely,\n\n[Author's Last Name]",
+      "metadata": {
+        "conciseness": 0.668,
+        "tone": "Formal, Polite, Friendly, Grateful",
+        "category": "Feedback, Apology",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('book title', np.int64(2))",
+          "('subject just', np.int64(1))",
+          "('just finished', np.int64(1))",
+          "('finished book', np.int64(1))",
+          "('title wow', np.int64(1))",
+          "('wow dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank taking', np.int64(1))",
+          "('taking time', np.int64(1))",
+          "('time write', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "54",
+      "email": "Hey everyone,\n\nSo, I was thinking... CAMPING TRIP! \ud83c\udfd5\ufe0f\ud83c\udf32\n\nI'm super keen to get away and breathe some fresh air, roast some marshmallows, and generally just chill out in nature. What do you guys think about a little getaway?\n\nI was kinda thinking maybe the weekend of [Start Date] to [End Date]? Or, if that doesn't work, we could do [Alternative Start Date] to [Alternative End Date]. Let me know what dates work best for you!\n\nWe can figure out the location and all the fun details (food, activities, who brings what) once we nail down the dates. But seriously, get back to me ASAP so we can get this show on the road!\n\nCan't wait to hear from you all!\n\nCheers,\n[Your Name]",
+      "response": "Subject: Re: Camping Trip?! YES! \ud83c\udfd5\ufe0f\n\nOMG YES! I'm so in! Those dates work for me, either one! \ud83e\udd73\n\nAnd YES to marshmallows! I'll totally bring the s'mores supplies - graham crackers, chocolate, the works! \ud83c\udf6b Let's do this!",
+      "metadata": {
+        "conciseness": 0.729,
+        "tone": "Friendly, Grateful, Encouraging",
+        "category": "Inquiry, Feedback",
+        "negotiation_style": "Cooperative, Empathetic",
+        "top_phrases": [
+          "('subject camping', np.int64(1))",
+          "('camping trip', np.int64(1))",
+          "('trip yes', np.int64(1))",
+          "('yes omg', np.int64(1))",
+          "('omg yes', np.int64(1))",
+          "('yes dates', np.int64(1))",
+          "('dates work', np.int64(1))",
+          "('work yes', np.int64(1))",
+          "('yes marshmallows', np.int64(1))",
+          "('marshmallows ll', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "55",
+      "email": "Dear [Hiring Manager Name],\n\nI am writing to formally accept the internship offer for the [Internship Title] position at [Company Name]. I am very pleased and grateful for the opportunity.\n\nThank you for extending this offer and for your time during the interview process. I am enthusiastic about the prospect of contributing to [Company Name] and gaining valuable experience in [Industry/Specific Area].\n\nI am eager to begin on [Start Date] and am available to discuss any onboarding requirements or necessary paperwork at your earliest convenience.\n\nThank you again for this wonderful opportunity.\n\nSincerely,\n\n[Student Name]",
+      "response": "Subject: Re: Internship Offer - [Internship Title]\n\nDear [Student Name],\n\nThank you for your prompt acceptance of the internship offer. We are delighted to welcome you to [Company Name].\n\nAttached you will find the onboarding instructions, including necessary paperwork and details regarding your first day. Please review these documents carefully and complete the required forms before your start date.\n\nWe are excited to have you join our team and look forward to your contributions. Please do not hesitate to contact us if you have any questions.\n\nSincerely,\n\n[Hiring Manager Name]\n[Company Name]",
+      "metadata": {
+        "conciseness": 0.693,
+        "tone": "Formal, Polite, Friendly, Encouraging",
+        "category": "Professional, Transactional, Informational",
+        "negotiation_style": "Cooperative, Persuasive, Empathetic",
+        "top_phrases": [
+          "('internship offer', np.int64(2))",
+          "('subject internship', np.int64(1))",
+          "('offer internship', np.int64(1))",
+          "('internship title', np.int64(1))",
+          "('title dear', np.int64(1))",
+          "('dear student', np.int64(1))",
+          "('student thank', np.int64(1))",
+          "('thank prompt', np.int64(1))",
+          "('prompt acceptance', np.int64(1))",
+          "('acceptance internship', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "56",
+      "email": "Subject: Follow Up - Claim [Claim Number: XXXXXXXX]\n\nDear [Insurance Company Name] Claims Department,\n\nI am writing to follow up on the status of my insurance claim, number XXXXXXXX, which I submitted on [Date of Submission].\n\nI understand that claim processing can sometimes take a bit of time, however, I have not yet received an update regarding the status of my claim. The delay is now causing some inconvenience, and I would appreciate it if you could provide an estimated timeframe for when I can expect a resolution.\n\nCould you please let me know if any further information is required from my end?\n\nThank you for your time and attention to this matter. I look forward to hearing from you soon.\n\nSincerely,\n\n[Your Name]\n[Your Phone Number]\n[Your Email Address]",
+      "response": "Subject: Re: Follow Up - Claim [Claim Number: XXXXXXXX]\n\nDear [Your Name],\n\nThank you for your email and for following up on claim number XXXXXXXX.\n\nWe apologize for the delay in providing an update on your claim.\n\nCurrently, your claim is [Current Status - e.g., \"under review\" or \"pending further investigation\"]. The next step in the process is [Next Step - e.g., \"for a claims adjuster to review the provided documentation\" or \"to await the results of the investigation\"].\n\nWe anticipate a resolution within [Estimated Timeframe - e.g., \"the next 5-7 business days\" or \"two weeks\"]. We will contact you if any further information is needed.\n\nThank you for your patience.\n\nSincerely,\n\n[Claims Specialist Name]\n[Insurance Company Name]",
+      "metadata": {
+        "conciseness": 0.671,
+        "tone": "Formal, Polite, Apologetic, Neutral",
+        "category": "Inquiry, Apology, Informational",
+        "negotiation_style": "Cooperative, Compromising, Persuasive, Empathetic",
+        "top_phrases": [
+          "('claim number', np.int64(2))",
+          "('number xxxxxxxx', np.int64(2))",
+          "('claim number xxxxxxxx', np.int64(2))",
+          "('subject follow', np.int64(1))",
+          "('follow claim', np.int64(1))",
+          "('claim claim', np.int64(1))",
+          "('xxxxxxxx dear', np.int64(1))",
+          "('dear thank', np.int64(1))",
+          "('thank email', np.int64(1))",
+          "('email following', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "57",
+      "email": "Dear [Musician's Name],\n\nMy name is [Your Name], and I am a filmmaker currently in production on a short film titled \"[Film Title]\". I am writing to you today to respectfully request permission to use your track, \"[Track Title]\", in my film.\n\nI am a great admirer of your work, and I believe that \"[Track Title]\" would be a perfect complement to a key scene in \"[Film Title]\". The scene in question depicts [brief, non-spoiler description of the scene].\n\nThe film is a [Genre] short film, approximately [Running Time] minutes in length. It is currently being submitted to various film festivals, and we intend to use the track solely for this purpose. We would, of course, provide full credit to you and your work in the film's end credits.\n\nI have attached a copy of the script for your review, as well as a brief synopsis of the film. I would be grateful if you would consider my request. Please let me know if you have any questions or require any further information.\n\nThank you for your time and consideration. I look forward to hearing from you soon.\n\nSincerely,\n\n[Your Name]\n[Your Title/Affiliation]\n[Your Contact Information]",
+      "response": "Subject: Re: Music Licensing Request - [Film Title]\n\nDear [Your Name],\n\nThank you for your email and your interest in using \"[Track Title]\" in your film, \"[Film Title]\". I have reviewed the script and synopsis and am agreeable to your request.\n\nThe terms of this agreement are as follows:\n\n*   The license is granted solely for the use of \"[Track Title]\" in the short film \"[Film Title]\".\n*   The license is non-exclusive.\n*   The track may be used for film festival submissions only.\n*   Full credit will be provided in the end credits.\n\nPlease confirm the exact wording you intend to use for the credit.\n\nI wish you the best with your film.\n\nSincerely,\n\n[Musician's Name]",
+      "metadata": {
+        "conciseness": 0.728,
+        "tone": "Formal, Polite, Neutral",
+        "category": "Request, Transactional",
+        "negotiation_style": "Cooperative, Assertive",
+        "top_phrases": [
+          "('film title', np.int64(3))",
+          "('track title', np.int64(2))",
+          "('film film', np.int64(2))",
+          "('film film title', np.int64(2))",
+          "('subject music', np.int64(1))",
+          "('music licensing', np.int64(1))",
+          "('licensing request', np.int64(1))",
+          "('request film', np.int64(1))",
+          "('title dear', np.int64(1))",
+          "('dear thank', np.int64(1))"
+        ]
+      }
+    },
+    {
+      "id": "58",
+      "email": "Subject: Re: [Meeting Name] - Recurring Meeting\n\nHi [Colleague's Name],\n\nThanks for the heads up regarding the recurring [Meeting Name] meeting. I understand that the current time doesn't work for you due to the scheduling conflict.\n\nNo worries at all. I'll make sure to keep you in the loop on any key takeaways or decisions from the meetings. Feel free to reach out if you have any questions.\n\nBest,\n\n[Your Name]",
+      "response": "Subject: Re: Re: [Meeting Name] - Recurring Meeting\n\nHi [Your Name],\n\nThanks for letting me know. I appreciate you keeping me in the loop.\n\nI'll be sure to share the meeting notes with you after each session.\n\nBest,\n\n[Colleague's Name]",
+      "metadata": {
+        "conciseness": 0.744,
+        "tone": "Polite, Friendly, Grateful",
+        "category": "Informational",
+        "negotiation_style": "Cooperative, Compromising, Empathetic",
+        "top_phrases": [
+          "('subject meeting', np.int64(1))",
+          "('meeting recurring', np.int64(1))",
+          "('recurring meeting', np.int64(1))",
+          "('meeting hi', np.int64(1))",
+          "('hi thanks', np.int64(1))",
+          "('thanks letting', np.int64(1))",
+          "('letting know', np.int64(1))",
+          "('know appreciate', np.int64(1))",
+          "('appreciate keeping', np.int64(1))",
+          "('keeping loop', np.int64(1))"
+        ]
+      }
+    }
+  ]

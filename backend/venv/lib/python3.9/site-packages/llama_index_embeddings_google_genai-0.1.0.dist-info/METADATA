@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: llama-index-embeddings-google-genai
+Version: 0.1.0
+Summary: llama-index embeddings google genai integration
+License: MIT
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: google-genai (>=1.4.0)
+Requires-Dist: llama-index-core (>=0.12.0,<0.13.0)
+Description-Content-Type: text/markdown
+
+# Google GenAI Embeddings
+
+This package provides a wrapper around the Google GenAI API, allowing you to use Gemini and Vertex AI embeddings in your projects.
+
+## Installation
+
+```bash
+pip install llama-index-embeddings-google-genai
+```
+
+## Usage
+
+```python
+from llama_index.embeddings.google_genai import GoogleGenAIEmbedding
+
+embed_model = GoogleGenAIEmbedding(model_name="text-embedding-004")
+
+embeddings = embed_model.get_text_embedding("Hello, world!")
+print(embeddings)
+```
+
+## Vertex AI
+
+```python
+embed_model = GoogleGenAIEmbedding(
+    model_name="text-embedding-004",
+    vertexai_config={
+        "project": "your-project-id",
+        "location": "your-location",
+    },
+)
+```
+

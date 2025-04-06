@@ -14,7 +14,7 @@ const SignInPage = ({ onLogin }) => {
       gapi.load("auth2", () => {
         gapi.auth2.init({
           clientId: CLIENT_ID,
-          scope: "https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.send",
+          scope: "https://www.googleapis.com/auth/gmail.readonly profile email",
         });
       });
     };
@@ -43,14 +43,13 @@ const SignInPage = ({ onLogin }) => {
     try {
       const auth2 = gapi.auth2.getAuthInstance();
       const googleUser = await auth2.signIn({
-        scope: "https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.send",
         prompt: 'consent',
       });
-  
+
       const token = googleUser.getAuthResponse().access_token;
       console.log("Access Token:", token);
       localStorage.setItem("accessToken", token);
-  
+
       const profile = googleUser.getBasicProfile();
       const userData = {
         token,
@@ -65,7 +64,6 @@ const SignInPage = ({ onLogin }) => {
       console.error("Error during sign-in:", error);
     }
   };
-  
 
   return (
     <div className="h-screen flex items-center justify-center bg-gradient-to-b from-indigo-400 to-slate-50">
@@ -94,7 +92,7 @@ const SignInPage = ({ onLogin }) => {
         <p className="px-10 pb-5">InboXpert is a platform that aims to transform email communication by integrating artificial intelligence into the regular mail, creating a seamless and intuitive user experience that enhances productivity and reshapes how users interact with their inbox.</p>
       
         <h1 className="text-4xl font-semibold mb-4 mt-10 text-left">Sign in</h1>
-        <p className="text-left text-l">with your Google Account to continue to SmartMail.</p>
+        <p className="text-left text-l">with your Google Account to continue to InboXpert.</p>
       
         <button
           onClick={handleSignIn}
