@@ -11,7 +11,7 @@ llm1 = GoogleGenAI(
 )
 llm2 = GoogleGenAI(
     model="gemini-2.0-flash",
-    api_key="AIzaSyCCOqMyckUorwYE1ZB7swdayyplgTPlTdw"
+    api_key=os.environ["GOOGLE_API_KEY"],
 )
 
 def get_top_phrases(email_responses, ngram_range=(2, 3), top_k=10):
